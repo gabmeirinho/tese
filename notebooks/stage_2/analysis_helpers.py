@@ -5,7 +5,7 @@ def count_unique_columns(expression: str) -> int:
     unique_features = set()
 
     #feature pattern to match column names, all start with column_ followed by digits or letters
-    feature_patterns = r'column_[\w]+'
+    feature_patterns = r'column_[A-Za-z0-9_]+'
     matches = re.findall(feature_patterns, expression, re.IGNORECASE)
 
     for match in matches:
@@ -13,12 +13,8 @@ def count_unique_columns(expression: str) -> int:
     return len(unique_features)
 
 def count_operators(expression: str) -> int:
-    operator_count = 0
-
-    pattern = r'\s[\+\-\*/]\s'
-    matches = re.findall(pattern, expression)
-    operator_count = len(matches)
-    return operator_count
+    pattern = "(?<=\w|\))\s*([+\-*/])\s*(?=\w|\()"
+    return len(re.findall(pattern, expression))
 
 def calculate_tree_depth(expression: str) -> int:
     max_depth = 0
