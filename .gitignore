@@ -1,2 +1,3 @@
 .venv/
 gp_outputs/
+.env
