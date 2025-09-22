@@ -1,701 +1,281 @@
-Eval Time,AUC,Expression
-0.03609479998704046,0.47333916083916083,"mean(past_values(mean perimeter, 8))"
-0.03038199999718927,0.5443618881118881,"min(past_values(worst concavity, 5))"
-0.00901989999692887,0.64881993006993,concave points error
-0.059438299998873845,0.576048951048951,"(max(past_values(radius error, 9)) + min(past_values(worst concave points, 5)))"
-0.030680199997732416,0.5633741258741258,"min(past_values(mean compactness, 5))"
-0.009011299989651889,0.5603146853146853,worst smoothness
-0.0334556000016164,0.6691433566433566,"mean(past_values(mean perimeter, 5))"
-0.0331327999883797,0.642701048951049,"min(past_values(mean area, 5))"
-0.0440795999893453,0.5231643356643356,"mean(past_values(mean smoothness, 5))"
-0.038432100001955405,0.4783653846153846,"min(past_values(symmetry error, 8))"
-0.03327879999415018,0.5443618881118881,"min(past_values(worst concavity, 5))"
-0.031128000002354383,0.5019667832167832,"min(past_values(concavity error, 8))"
-0.031038999994052574,0.5590034965034966,"max(past_values(mean radius, 8))"
-0.06861580000258982,0.659965034965035,"(((worst texture + mean(past_values(worst area, 5))) + (texture error + concavity error)) + worst texture)"
-0.0311197999981232,0.45104895104895104,"min(past_values(radius error, 7))"
-0.04340350002166815,0.5310314685314685,"(mean(past_values(perimeter error, 9)) + worst symmetry)"
-0.03370940001332201,0.590034965034965,"min(past_values(mean concavity, 9))"
-0.03408460001810454,0.5716783216783217,"mean(past_values(mean radius, 7))"
-0.030821399996057153,0.5570367132867132,"max(past_values(concave points error, 9))"
-0.032741100003477186,0.506993006993007,"mean(past_values(compactness error, 10))"
-0.030871499999193475,0.6260926573426573,"max(past_values(mean compactness, 6))"
-0.016308899997966364,0.6883741258741258,(mean texture + perimeter error)
-0.03300860000308603,0.5419580419580419,"mean(past_values(smoothness error, 6))"
-0.03333760000532493,0.5751748251748252,"mean(past_values(worst compactness, 7))"
-0.03011940000578761,0.42438811188811193,"min(past_values(worst radius, 8))"
-0.03300570001010783,0.4401223776223776,"mean(past_values(fractal dimension error, 5))"
-0.06362300002365373,0.5965909090909092,"(mean(past_values(mean perimeter, 9)) + min(past_values(mean perimeter, 8)))"
-0.008590499986894429,0.8430944055944055,mean radius
-0.030362799996510148,0.39969405594405594,"min(past_values(compactness error, 5))"
-0.05909229998360388,0.6435751748251748,"(max(past_values(mean perimeter, 10)) + min(past_values(texture error, 5)))"
-0.03072680000332184,0.5358391608391608,"max(past_values(worst texture, 6))"
-0.03288590000011027,0.49213286713286714,"mean(past_values(worst smoothness, 9))"
-0.008679499995196238,0.64881993006993,concave points error
-0.02985560000524856,0.4698426573426573,"min(past_values(worst fractal dimension, 10))"
-0.031140800012508407,0.6693618881118881,"min(past_values(texture error, 6))"
-0.07271180002135225,0.826486013986014,"((mean(past_values(smoothness error, 10)) + area error) + min(past_values(worst radius, 6)))"
-0.03286950002075173,0.5397727272727273,"mean(past_values(smoothness error, 10))"
-0.00865840000915341,0.5268793706293706,mean fractal dimension
-0.008550700003979728,0.6276223776223776,worst compactness
-0.032880499988095835,0.5432692307692307,"mean(past_values(concavity error, 7))"
-0.10626100000808947,0.8208041958041957,"(min(past_values(mean texture, 9)) + (min(past_values(mean concavity, 7)) + ((mean perimeter + mean concave points) + max(past_values(concavity error, 5)))))"
-0.03278380000847392,0.5817307692307693,"mean(past_values(concavity error, 6))"
-0.03420029999688268,0.4818618881118881,"mean(past_values(mean symmetry, 9))"
-0.03040399999008514,0.5474213286713286,"max(past_values(fractal dimension error, 7))"
-0.033019599999533966,0.5646853146853147,"mean(past_values(concave points error, 9))"
-0.03018790000351146,0.5791083916083916,"max(past_values(worst compactness, 8))"
-0.00910749999457039,0.8986013986013986,worst area
-0.008650100004160777,0.5603146853146853,worst smoothness
-0.03260299999965355,0.513986013986014,"mean(past_values(worst perimeter, 9))"
-0.008425699983490631,0.7381993006993007,radius error
-0.03609479998704046,0.47333916083916083,"mean(past_values(mean perimeter, 8))"
-0.059438299998873845,0.576048951048951,"(max(past_values(radius error, 9)) + min(past_values(worst concave points, 5)))"
-0.008606499992311,0.5710227272727273,worst fractal dimension
-0.030508399999234825,0.5537587412587414,"max(past_values(fractal dimension error, 10))"
-0.029377800005022436,0.576486013986014,"min(past_values(worst concave points, 5))"
-0.06210329997702502,0.541520979020979,"(mean(past_values(mean concavity, 10)) + max(past_values(worst radius, 10)))"
-0.03006340001593344,0.4755244755244755,"min(past_values(perimeter error, 5))"
-0.03394749999279156,0.5552884615384615,"mean(past_values(worst smoothness, 6))"
-0.06214300001738593,0.5965909090909092,"(min(past_values(worst fractal dimension, 7)) + mean(past_values(mean area, 5)))"
-0.030456400010734797,0.458041958041958,"min(past_values(mean perimeter, 9))"
-0.034144200006267056,0.5362762237762237,"mean(past_values(worst fractal dimension, 7))"
-0.029994100012117997,0.489291958041958,"min(past_values(mean concave points, 5))"
-0.032460999995237216,0.5161713286713286,"mean(past_values(worst concavity, 8))"
-0.029285700002219528,0.48972902097902105,"min(past_values(worst concavity, 6))"
-0.03571579998242669,0.5791083916083916,"max(past_values(worst compactness, 8))"
-0.03259809999144636,0.5013111888111889,"mean(past_values(concave points error, 7))"
-0.008526500023435801,0.8140297202797203,worst concavity
-0.03245749999769032,0.5218531468531469,"mean(past_values(worst compactness, 9))"
-0.08773349999682978,0.5327797202797202,"((min(past_values(worst symmetry, 6)) + min(past_values(worst texture, 6))) + max(past_values(mean fractal dimension, 9)))"
-0.008503599994583055,0.5911276223776224,mean texture
-0.02973109998856671,0.5443618881118881,"max(past_values(worst texture, 5))"
-0.03272519999882206,0.5852272727272727,"mean(past_values(symmetry error, 6))"
-0.008596500003477558,0.9003496503496503,worst perimeter
-0.029667400027392432,0.48972902097902105,"min(past_values(worst concavity, 6))"
-0.062184999987948686,0.5161713286713286,"(mean(past_values(worst concave points, 10)) + min(past_values(mean concavity, 10)))"
-0.032642099977238104,0.5321241258741258,"mean(past_values(worst compactness, 10))"
-0.030501100001856685,0.45214160839160833,"min(past_values(worst radius, 10))"
-0.009552400006214157,0.5762674825174825,worst texture
-0.031191499991109595,0.4975961538461538,"max(past_values(worst texture, 10))"
-0.05805920000420883,0.48819930069930073,"(min(past_values(area error, 6)) + min(past_values(concavity error, 8)))"
-0.09091299999272451,0.611451048951049,"((max(past_values(mean radius, 7)) + max(past_values(smoothness error, 10))) + mean(past_values(worst symmetry, 9)))"
-0.00918600001023151,0.5439248251748252,texture error
-0.09640969999600202,0.5432692307692307,"(min(past_values(worst texture, 6)) + (worst compactness + (min(past_values(symmetry error, 5)) + min(past_values(mean compactness, 5)))))"
-0.016308899997966364,0.6883741258741258,(mean texture + perimeter error)
-0.030372000008355826,0.5552884615384615,"max(past_values(mean smoothness, 9))"
-0.032119100011186674,0.5279720279720279,"mean(past_values(worst fractal dimension, 9))"
-0.042651700001442805,0.7591783216783217,"(min(past_values(worst compactness, 10)) + radius error)"
-0.016308899997966364,0.6883741258741258,(mean texture + perimeter error)
-0.030656700022518635,0.5148601398601399,"max(past_values(worst area, 10))"
-0.05811839998932555,0.5944055944055944,"(max(past_values(worst compactness, 10)) + max(past_values(worst fractal dimension, 5)))"
-0.03112120000878349,0.5666520979020979,"max(past_values(concavity error, 10))"
-0.008657300000777468,0.6365821678321677,concavity error
-0.030336600000737235,0.4252622377622378,"min(past_values(worst texture, 9))"
-0.030655399983515963,0.5856643356643356,"max(past_values(area error, 10))"
-0.03302340002846904,0.42438811188811193,"min(past_values(worst radius, 8))"
-0.034550299984402955,0.6180069930069929,"mean(past_values(smoothness error, 8))"
-0.03249440001673065,0.3299825174825175,"min(past_values(radius error, 6))"
-0.016308899997966364,0.6883741258741258,(mean texture + perimeter error)
-0.07008119998499751,0.8684440559440559,"((max(past_values(mean concavity, 10)) + min(past_values(mean texture, 6))) + worst area)"
-0.009019399993121624,0.8631993006993006,worst radius
-0.03609479998704046,0.47333916083916083,"mean(past_values(mean perimeter, 8))"
-0.08773349999682978,0.5327797202797202,"((min(past_values(worst symmetry, 6)) + min(past_values(worst texture, 6))) + max(past_values(mean fractal dimension, 9)))"
-0.03408990000025369,0.5240384615384615,"mean(past_values(worst radius, 6))"
-0.031184100022073835,0.5026223776223776,"min(past_values(concave points error, 7))"
-0.009152599988738075,0.6059877622377623,mean smoothness
-0.031492100009927526,0.5054632867132867,"max(past_values(mean concavity, 10))"
-0.06273719997261651,0.6243444055944056,"(max(past_values(symmetry error, 7)) + max(past_values(texture error, 8)))"
-0.009192500001518056,0.64881993006993,concave points error
-0.03378080000402406,0.5083041958041958,"mean(past_values(compactness error, 6))"
-0.03098329997737892,0.5474213286713286,"max(past_values(fractal dimension error, 7))"
-0.03419669999857433,0.42438811188811193,"min(past_values(worst radius, 8))"
-0.032185399992158636,0.5716783216783217,"mean(past_values(mean radius, 7))"
-0.009176499996101484,0.7312062937062938,mean compactness
-0.03165039999294095,0.5249125874125874,"max(past_values(concavity error, 6))"
-0.008921600005123764,0.64881993006993,concave points error
-0.009325699997134507,0.48951048951048953,symmetry error
-0.029285700002219528,0.48972902097902105,"min(past_values(worst concavity, 6))"
-0.030819700012216344,0.48382867132867136,"min(past_values(mean perimeter, 6))"
-0.030022599996300414,0.5607517482517482,"min(past_values(worst fractal dimension, 7))"
-0.009056100010639057,0.5607517482517482,mean symmetry
-0.009334600006695837,0.5701486013986014,fractal dimension error
-0.030422200012253597,0.6241258741258741,"max(past_values(smoothness error, 8))"
-0.03303190000588074,0.541083916083916,"mean(past_values(worst concave points, 6))"
-0.029285700002219528,0.48972902097902105,"min(past_values(worst concavity, 6))"
-0.03311140000005253,0.5104895104895104,"mean(past_values(concavity error, 9))"
-0.06274650001432747,0.6044580419580419,"(max(past_values(worst compactness, 8)) + mean fractal dimension)"
-0.1306938000197988,0.4777097902097902,"(min(past_values(mean concave points, 6)) + ((min(past_values(concave points error, 8)) + max(past_values(mean symmetry, 8))) + max(past_values(mean texture, 10))))"
-0.03049449998070486,0.6444493006993006,"min(past_values(texture error, 5))"
-0.033400400017853826,0.46809440559440557,"mean(past_values(fractal dimension error, 9))"
-0.040272199985338375,0.8990384615384616,"(min(past_values(mean compactness, 10)) + worst area)"
-0.030442900024354458,0.4156468531468531,"min(past_values(mean concave points, 8))"
-0.03133719999459572,0.4512674825174825,"min(past_values(symmetry error, 7))"
-0.031228299980284646,0.5533216783216783,"min(past_values(texture error, 9))"
-0.03227269998751581,0.5432692307692307,"max(past_values(compactness error, 9))"
-0.008615300001110882,0.8986013986013986,worst area
-0.030849500006297603,0.5019667832167832,"min(past_values(worst texture, 8))"
-0.03300699999090284,0.5240384615384615,"mean(past_values(worst radius, 6))"
-0.06096629999228753,0.5716783216783217,"(max(past_values(perimeter error, 10)) + max(past_values(mean concave points, 8)))"
-0.06989559999783523,0.4794580419580419,"(min(past_values(worst texture, 8)) + (radius error + max(past_values(mean concave points, 5))))"
-0.03239549999125302,0.5773601398601399,"mean(past_values(worst radius, 8))"
-0.040502100018784404,0.5192307692307693,"(min(past_values(texture error, 9)) + mean compactness)"
-0.06603640000685118,0.5126748251748252,"(min(past_values(worst compactness, 10)) + mean(past_values(worst smoothness, 8)))"
-0.06631039999774657,0.6009615384615384,"(mean(past_values(radius error, 10)) + mean(past_values(mean perimeter, 6)))"
-0.031751700007589534,0.48448426573426573,"min(past_values(mean concavity, 6))"
-0.05948050000006333,0.6936188811188811,"(max(past_values(worst area, 8)) + max(past_values(radius error, 9)))"
-0.07069610001053661,0.6883741258741259,"(min(past_values(mean smoothness, 8)) + (mean perimeter + max(past_values(area error, 5))))"
-0.0584443999978248,0.5906905594405594,"(max(past_values(worst concave points, 7)) + max(past_values(mean concave points, 6)))"
-0.029819899995345622,0.46962412587412583,"min(past_values(mean concave points, 6))"
-0.03316979997907765,0.5817307692307693,"mean(past_values(mean perimeter, 10))"
-0.04400510000414215,0.7880244755244754,"(min(past_values(worst fractal dimension, 8)) + mean concave points)"
-0.03609479998704046,0.47333916083916083,"mean(past_values(mean perimeter, 8))"
-0.03419669999857433,0.42438811188811193,"min(past_values(worst radius, 8))"
-0.06385489998501725,0.6555944055944056,"(mean(past_values(worst concavity, 5)) + max(past_values(compactness error, 5)))"
-0.03310380000039004,0.5817307692307693,"mean(past_values(perimeter error, 6))"
-0.06631039999774657,0.6009615384615384,"(mean(past_values(radius error, 10)) + mean(past_values(mean perimeter, 6)))"
-0.0584443999978248,0.5906905594405594,"(max(past_values(worst concave points, 7)) + max(past_values(mean concave points, 6)))"
-0.07209710002643988,0.5192307692307693,"(min(past_values(mean symmetry, 9)) + (mean(past_values(mean fractal dimension, 7)) + concavity error))"
-0.030831200012471527,0.4458041958041958,"max(past_values(worst fractal dimension, 9))"
-0.033495500014396384,0.5362762237762237,"mean(past_values(worst fractal dimension, 7))"
-0.008823599986499175,0.5911276223776224,mean texture
-0.03278169999248348,0.5083041958041958,"mean(past_values(compactness error, 6))"
-0.030652299989014864,0.5638111888111889,"min(past_values(texture error, 7))"
-0.0584443999978248,0.5906905594405594,"(max(past_values(worst concave points, 7)) + max(past_values(mean concave points, 6)))"
-0.034118999989004806,0.54763986013986,"mean(past_values(worst radius, 10))"
-0.030471900012344122,0.590034965034965,"min(past_values(mean concavity, 9))"
-0.029951700009405613,0.5273164335664335,"max(past_values(mean fractal dimension, 10))"
-0.06974139998783357,0.6442307692307692,"((compactness error + min(past_values(worst perimeter, 7))) + max(past_values(worst texture, 8)))"
-0.10208479998982511,0.4855769230769231,"(texture error + ((min(past_values(mean area, 6)) + min(past_values(mean perimeter, 7))) + mean(past_values(concave points error, 6))))"
-0.031986899994080886,0.45214160839160833,"min(past_values(worst radius, 10))"
-0.030801899993093684,0.5441433566433567,"min(past_values(area error, 5))"
-0.008736799994949251,0.5911276223776224,mean texture
-0.030071799992583692,0.423076923076923,"max(past_values(mean texture, 6))"
-0.03371809999225661,0.5378059440559442,"mean(past_values(worst smoothness, 5))"
-0.03306180000072345,0.5319055944055944,"mean(past_values(compactness error, 8))"
-0.03165489999810234,0.44886363636363635,"max(past_values(worst fractal dimension, 6))"
-0.033367999974871054,0.4401223776223776,"mean(past_values(fractal dimension error, 5))"
-0.03165039999294095,0.5249125874125874,"max(past_values(concavity error, 6))"
-0.08362140000099316,0.7609265734265734,"((mean(past_values(mean concave points, 5)) + smoothness error) + (worst concavity + mean(past_values(mean smoothness, 10))))"
-0.008948400005465373,0.5603146853146853,worst smoothness
-0.02989889998571016,0.45039335664335667,"max(past_values(concavity error, 5))"
-0.008759599993936718,0.48426573426573427,smoothness error
-0.00904820000869222,0.5605332167832169,compactness error
-0.008901299996068701,0.5605332167832169,compactness error
-0.030292499985080212,0.48863636363636365,"max(past_values(fractal dimension error, 8))"
-0.0371480000030715,0.4888548951048951,"min(past_values(mean smoothness, 7))"
-0.03242080000927672,0.621284965034965,"mean(past_values(worst area, 5))"
-0.030232499993871897,0.6545017482517482,"min(past_values(worst area, 8))"
-0.03236599999945611,0.527972027972028,"mean(past_values(worst symmetry, 5))"
-0.008944699977291748,0.8986013986013986,worst area
-0.03266170001006685,0.5415209790209791,"min(past_values(worst smoothness, 7))"
-0.0305950999900233,0.5255681818181819,"max(past_values(radius error, 10))"
-0.02941699998336844,0.46962412587412583,"min(past_values(mean concave points, 6))"
-0.03165039999294095,0.5249125874125874,"max(past_values(concavity error, 6))"
-0.029973199998494238,0.5775786713286712,"min(past_values(worst area, 5))"
-0.03036259999498725,0.6201923076923077,"min(past_values(mean radius, 8))"
-0.033267399994656444,0.5817307692307693,"mean(past_values(concavity error, 6))"
-0.03184459998738021,0.6968968531468531,"max(past_values(worst area, 6))"
-0.03165039999294095,0.5249125874125874,"max(past_values(concavity error, 6))"
-0.03165039999294095,0.5249125874125874,"max(past_values(concavity error, 6))"
-0.03023049997864291,0.5782342657342657,"max(past_values(worst concave points, 8))"
-0.03609479998704046,0.47333916083916083,"mean(past_values(mean perimeter, 8))"
-0.03419669999857433,0.42438811188811193,"min(past_values(worst radius, 8))"
-0.030404299992369488,0.5006555944055944,"min(past_values(concave points error, 5))"
-0.030602000013459474,0.4379370629370629,"min(past_values(mean smoothness, 8))"
-0.030603699997300282,0.4053758741258741,"min(past_values(worst compactness, 9))"
-0.008402799983741716,0.8361013986013986,mean perimeter
-0.03300460000173189,0.40734265734265734,"mean(past_values(worst texture, 10))"
-0.03008550000959076,0.5266608391608392,"max(past_values(concave points error, 5))"
-0.029973199998494238,0.5775786713286712,"min(past_values(worst area, 5))"
-0.030465799994999543,0.736013986013986,"max(past_values(worst radius, 5))"
-0.03353300000890158,0.5419580419580419,"mean(past_values(smoothness error, 6))"
-0.029713900003116578,0.7183129370629371,"max(past_values(worst area, 7))"
-0.0304191000177525,0.5437062937062938,"min(past_values(mean concavity, 7))"
-0.008937700011301786,0.8140297202797203,worst concavity
-0.04017659998498857,0.5083041958041958,"(worst fractal dimension + min(past_values(smoothness error, 9)))"
-0.03221420000772923,0.5640297202797203,"mean(past_values(mean area, 6))"
-0.03041439998196438,0.5211975524475525,"max(past_values(area error, 8))"
-0.00912949998746626,0.8140297202797203,worst concavity
-0.029852000006940216,0.5190122377622378,"min(past_values(perimeter error, 9))"
-0.029622800007928163,0.652534965034965,"max(past_values(mean compactness, 8))"
-0.0301208000164479,0.5633741258741258,"min(past_values(mean texture, 8))"
-0.05756889999611303,0.5607517482517482,"(max(past_values(mean area, 8)) + min(past_values(perimeter error, 9)))"
-0.02960959999472834,0.48339160839160844,"max(past_values(compactness error, 7))"
-0.008918400009861216,0.7381993006993007,radius error
-0.00860509998165071,0.8492132867132867,worst concave points
-0.008460799988824874,0.6276223776223776,worst compactness
-0.03209459999925457,0.4401223776223776,"mean(past_values(fractal dimension error, 5))"
-0.03160099999513477,0.44361888111888115,"max(past_values(mean texture, 9))"
-0.029973199998494238,0.5775786713286712,"min(past_values(worst area, 5))"
-0.008843200019327924,0.8361013986013986,mean perimeter
-0.03245149998110719,0.5603146853146853,"mean(past_values(worst area, 10))"
-0.030170799989718944,0.5266608391608392,"max(past_values(concave points error, 5))"
-0.02992250001989305,0.545236013986014,"min(past_values(area error, 7))"
-0.030628299980890006,0.39969405594405594,"min(past_values(compactness error, 5))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.029973199998494238,0.5775786713286712,"min(past_values(worst area, 5))"
-0.037406599993119016,0.46416083916083917,"min(past_values(worst radius, 6))"
-0.03056700000888668,0.5537587412587414,"max(past_values(fractal dimension error, 10))"
-0.029586799995740876,0.6534090909090908,"max(past_values(smoothness error, 7))"
-0.008557900000596419,0.8361013986013986,mean perimeter
-0.04011109998100437,0.5078671328671329,"(worst compactness + min(past_values(worst perimeter, 6)))"
-0.029359999985899776,0.548513986013986,"max(past_values(mean symmetry, 10))"
-0.029973199998494238,0.5775786713286712,"min(past_values(worst area, 5))"
-0.03146369999740273,0.5633741258741258,"min(past_values(mean texture, 8))"
-0.03292020002845675,0.5240384615384615,"mean(past_values(worst radius, 6))"
-0.008694599993759766,0.8986013986013986,worst area
-0.031073300022399053,0.43028846153846145,"min(past_values(worst fractal dimension, 9))"
-0.03014619997702539,0.4281031468531469,"min(past_values(worst compactness, 5))"
-0.02962310001021251,0.6787587412587412,"max(past_values(worst concavity, 5))"
-0.03188580001005903,0.5725524475524475,"max(past_values(mean smoothness, 5))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.008823700016364455,0.5439248251748252,texture error
-0.03019640001002699,0.6604020979020979,"max(past_values(worst compactness, 6))"
-0.008917200000723824,0.5605332167832169,compactness error
-0.05788520001806319,0.6726398601398601,"(max(past_values(worst concavity, 10)) + min(past_values(radius error, 8)))"
-0.03011190000688657,0.5633741258741258,"min(past_values(mean texture, 8))"
-0.00844659999711439,0.8492132867132867,worst concave points
-0.06971640000119805,0.5091783216783217,"(concave points error + (max(past_values(mean smoothness, 9)) + min(past_values(fractal dimension error, 6))))"
-0.03331050000269897,0.44296328671328666,"mean(past_values(mean smoothness, 7))"
-0.03246539999963716,0.5795454545454546,"mean(past_values(worst perimeter, 6))"
-0.031073300022399053,0.43028846153846145,"min(past_values(worst fractal dimension, 9))"
-0.02990910000517033,0.5594405594405594,"min(past_values(mean area, 9))"
-0.008561199996620417,0.5710227272727273,worst fractal dimension
-0.06258979998528957,0.5118006993006994,"(max(past_values(mean texture, 9)) + mean(past_values(worst radius, 7)))"
-0.032760500005679205,0.47333916083916083,"mean(past_values(mean perimeter, 8))"
-0.031073300022399053,0.43028846153846145,"min(past_values(worst fractal dimension, 9))"
-0.03015509998658672,0.4379370629370629,"min(past_values(mean smoothness, 8))"
-0.031073300022399053,0.43028846153846145,"min(past_values(worst fractal dimension, 9))"
-0.03286920001846738,0.5310314685314685,"mean(past_values(smoothness error, 7))"
-0.03258319999440573,0.40734265734265734,"mean(past_values(worst texture, 10))"
-0.02989580002031289,0.4967220279720279,"max(past_values(mean perimeter, 7))"
-0.00855339999543503,0.8627622377622377,mean area
-0.030168800003593788,0.5225087412587412,"min(past_values(area error, 6))"
-0.030092400003923103,0.5552884615384615,"max(past_values(mean smoothness, 9))"
-0.008826499979477376,0.8430944055944055,mean radius
-0.02972270001191646,0.5528846153846154,"max(past_values(worst smoothness, 10))"
-0.03274349999264814,0.524256993006993,"mean(past_values(mean smoothness, 10))"
-0.02948379999725148,0.517701048951049,"max(past_values(worst fractal dimension, 7))"
-0.14875659998506308,0.5467657342657343,"(((mean(past_values(mean symmetry, 8)) + min(past_values(worst texture, 10))) + (min(past_values(mean texture, 8)) + min(past_values(fractal dimension error, 6)))) + min(past_values(worst texture, 6)))"
-0.03266190001158975,0.5266608391608392,"mean(past_values(area error, 10))"
-0.03091939998557791,0.6343968531468531,"max(past_values(mean compactness, 9))"
-0.032527900009881705,0.5738636363636364,"mean(past_values(mean area, 7))"
-0.009098100010305643,0.8430944055944055,mean radius
-0.00890580000123009,0.6276223776223776,worst compactness
-0.008548599987989292,0.5762674825174825,worst texture
-0.009142599999904633,0.5268793706293706,mean fractal dimension
-0.058836800017161295,0.5607517482517483,"(min(past_values(mean fractal dimension, 6)) + min(past_values(worst area, 6)))"
-0.030095100024482235,0.5861013986013986,"max(past_values(mean perimeter, 5))"
-0.03049890001420863,0.5083041958041958,"max(past_values(concave points error, 10))"
-0.030915999988792464,0.4831730769230769,"max(past_values(mean texture, 8))"
-0.030557199992472306,0.4901660839160839,"max(past_values(worst fractal dimension, 5))"
-0.030377799994312227,0.4407779720279721,"min(past_values(worst radius, 7))"
-0.008692100003827363,0.9003496503496503,worst perimeter
-0.03023340000072494,0.6999562937062938,"max(past_values(worst perimeter, 8))"
-0.008598500018706545,0.5762674825174825,worst texture
-0.008624200010672212,0.8430944055944055,mean radius
-0.03019059999496676,0.5812937062937064,"max(past_values(mean symmetry, 8))"
-0.03009750001365319,0.4842657342657343,"min(past_values(mean texture, 10))"
-0.03021610001451336,0.6092657342657344,"max(past_values(worst concave points, 7))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.030653399997390807,0.4156468531468531,"min(past_values(mean concave points, 8))"
-0.031025600008433685,0.4003496503496503,"min(past_values(compactness error, 6))"
-0.03356609999900684,0.5640297202797203,"mean(past_values(mean area, 6))"
-0.03317810001317412,0.6315559440559441,"mean(past_values(mean perimeter, 6))"
-0.06561240000883117,0.39816433566433573,"(min(past_values(worst concavity, 7)) + mean(past_values(worst texture, 9)))"
-0.008373499993467703,0.8627622377622377,mean area
-0.03045269998256117,0.5871940559440559,"max(past_values(worst concave points, 10))"
-0.07460040002479218,0.5524475524475524,"(max(past_values(fractal dimension error, 5)) + (mean concavity + mean(past_values(worst radius, 6))))"
-0.031206700019538403,0.6254370629370629,"max(past_values(mean smoothness, 7))"
-0.009177900006761774,0.5607517482517482,mean symmetry
-0.05070930000510998,0.41083916083916083,"mean(past_values(radius error, 10))"
-0.01058750000083819,0.8430944055944055,mean radius
-0.063660699990578,0.6486013986013986,"(mean(past_values(worst fractal dimension, 9)) + min(past_values(mean area, 6)))"
-0.059778900002129376,0.6560314685314685,"(min(past_values(worst fractal dimension, 5)) + max(past_values(mean concavity, 6)))"
-0.07267220001085661,0.8435314685314685,"((max(past_values(mean compactness, 8)) + mean(past_values(fractal dimension error, 9))) + area error)"
-0.009142599999904633,0.5268793706293706,mean fractal dimension
-0.008576699998229742,0.8457167832167831,mean concave points
-0.009142599999904633,0.5268793706293706,mean fractal dimension
-0.00925249999272637,0.48426573426573427,smoothness error
-0.030419899994740263,0.5920017482517482,"max(past_values(perimeter error, 7))"
-0.03078320002532564,0.5594405594405594,"min(past_values(mean area, 9))"
-0.04304089999641292,0.4366258741258741,"(fractal dimension error + mean(past_values(compactness error, 5)))"
-0.030346799991093576,0.4541083916083916,"min(past_values(compactness error, 8))"
-0.030243399989558384,0.44143356643356635,"max(past_values(worst symmetry, 7))"
-0.032734000007621944,0.4375,"mean(past_values(mean fractal dimension, 6))"
-0.030239099985919893,0.6636800699300699,"max(past_values(mean concavity, 8))"
-0.029840500006685033,0.39160839160839167,"min(past_values(smoothness error, 9))"
-0.033154800010379404,0.6099213286713288,"mean(past_values(worst compactness, 6))"
-0.030290399998193607,0.4490821678321679,"min(past_values(worst texture, 10))"
-0.03242479998152703,0.5753933566433567,"max(past_values(smoothness error, 10))"
-0.04025930000352673,0.46853146853146854,"(worst fractal dimension + min(past_values(perimeter error, 10)))"
-0.06233089999295771,0.5996503496503496,"(max(past_values(mean smoothness, 10)) + mean(past_values(mean texture, 7)))"
-0.03312599999480881,0.44405594405594406,"mean(past_values(worst symmetry, 9))"
-0.008935899997595698,0.5616258741258742,worst symmetry
-0.030234000005293638,0.4755244755244755,"min(past_values(concavity error, 9))"
-0.009142599999904633,0.5268793706293706,mean fractal dimension
-0.032585800014203414,0.5552884615384615,"mean(past_values(worst smoothness, 6))"
-0.009018000011565164,0.5701486013986014,fractal dimension error
-0.008698000019649044,0.8457167832167831,mean concave points
-0.008736299991142005,0.6365821678321677,concavity error
-0.008162400015862659,0.9003496503496503,worst perimeter
-0.008723200007807463,0.5701486013986014,fractal dimension error
-0.008529200014891103,0.6276223776223776,worst compactness
-0.0985260000161361,0.506993006993007,"(((min(past_values(texture error, 10)) + max(past_values(concavity error, 9))) + mean compactness) + min(past_values(worst radius, 9)))"
-0.008885899995220825,0.9003496503496503,worst perimeter
-0.008526399993570521,0.64881993006993,concave points error
-0.03035519999684766,0.4755244755244755,"min(past_values(perimeter error, 5))"
-0.00852520001353696,0.8361013986013986,mean perimeter
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.030415299988817424,0.590034965034965,"min(past_values(mean concavity, 9))"
-0.008807200007140636,0.7991695804195803,perimeter error
-0.03045269998256117,0.5871940559440559,"max(past_values(worst concave points, 10))"
-0.0300023999880068,0.5017482517482518,"max(past_values(radius error, 8))"
-0.0308216999983415,0.6405157342657343,"max(past_values(mean perimeter, 10))"
-0.03260760000557639,0.6350524475524476,"mean(past_values(mean concavity, 5))"
-0.032826800015755,0.5605332167832168,"mean(past_values(worst perimeter, 5))"
-0.03287419999833219,0.381993006993007,"min(past_values(smoothness error, 10))"
-0.03239690000191331,0.621284965034965,"mean(past_values(worst area, 5))"
-0.00894880000851117,0.7381993006993007,radius error
-0.04025930000352673,0.46853146853146854,"(worst fractal dimension + min(past_values(perimeter error, 10)))"
-0.04025930000352673,0.46853146853146854,"(worst fractal dimension + min(past_values(perimeter error, 10)))"
-0.029549600003520027,0.4211101398601399,"min(past_values(worst concave points, 9))"
-0.008479399984935299,0.9003496503496503,worst perimeter
-0.029382000007899478,0.5747377622377623,"min(past_values(worst area, 10))"
-0.03277109999908134,0.4344405594405594,"mean(past_values(worst texture, 9))"
-0.031229499989422038,0.5196678321678322,"min(past_values(mean texture, 6))"
-0.03469490000861697,0.624562937062937,"mean(past_values(mean area, 9))"
-0.009282900020480156,0.80506993006993,mean concavity
-0.030401500000152737,0.6055506993006994,"max(past_values(smoothness error, 5))"
-0.008472800021991134,0.5911276223776224,mean texture
-0.015333599993027747,0.8990384615384616,(worst area + worst concave points)
-0.00874740001745522,0.8986013986013986,worst area
-0.008621000015409663,0.5701486013986014,fractal dimension error
-0.029287200013641268,0.6490384615384616,"min(past_values(mean radius, 10))"
-0.03252399998018518,0.43225524475524474,"mean(past_values(concavity error, 8))"
-0.008233500004280359,0.8140297202797203,worst concavity
-0.03003779999562539,0.5858828671328672,"max(past_values(smoothness error, 9))"
-0.008555899985367432,0.7991695804195803,perimeter error
-0.14146730001084507,0.4274475524475525,"(((mean(past_values(worst symmetry, 9)) + mean(past_values(worst smoothness, 7))) + (min(past_values(mean perimeter, 9)) + (mean concavity + worst concave points))) + min(past_values(worst concavity, 10)))"
-0.03585300000850111,0.6099213286713288,"mean(past_values(worst compactness, 6))"
-0.030455500003881752,0.3942307692307693,"min(past_values(worst compactness, 7))"
-0.008700999984284863,0.9003496503496503,worst perimeter
-0.03349859997979365,0.5083041958041958,"min(past_values(worst symmetry, 6))"
-0.029834499990101904,0.5211975524475525,"max(past_values(area error, 8))"
-0.03027650000876747,0.5006555944055944,"min(past_values(concave points error, 5))"
-0.00892530000419356,0.9003496503496503,worst perimeter
-0.029512399982195348,0.5633741258741258,"min(past_values(mean texture, 8))"
-0.032696600013878196,0.5568181818181819,"mean(past_values(mean concave points, 8))"
-0.04025930000352673,0.46853146853146854,"(worst fractal dimension + min(past_values(perimeter error, 10)))"
-0.029757000011159107,0.68006993006993,"max(past_values(texture error, 7))"
-0.008375800010981038,0.8492132867132867,worst concave points
-0.030093600013060495,0.6254370629370629,"max(past_values(mean smoothness, 7))"
-0.03054909998900257,0.47443181818181823,"min(past_values(worst radius, 9))"
-0.030699199996888638,0.4281031468531469,"min(past_values(worst compactness, 5))"
-0.03245180001249537,0.5640297202797202,"min(past_values(mean compactness, 8))"
-0.029810400010319427,0.44361888111888115,"max(past_values(mean texture, 9))"
-0.03265050001209602,0.5738636363636364,"mean(past_values(mean area, 7))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.03283120002015494,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.030363400001078844,0.43553321678321677,"max(past_values(mean texture, 7))"
-0.008576199994422495,0.8140297202797203,worst concavity
-0.04286240000510588,0.46284965034965037,"(mean fractal dimension + mean(past_values(worst symmetry, 5)))"
-0.03062049997970462,0.5083041958041958,"max(past_values(concave points error, 10))"
-0.00947940000332892,0.8492132867132867,worst concave points
-0.008727199980057776,0.8140297202797203,worst concavity
-0.00824219998321496,0.8489947552447553,area error
-0.030483299982734025,0.5179195804195804,"min(past_values(mean concave points, 7))"
-0.030725999997230247,0.5537587412587414,"max(past_values(fractal dimension error, 10))"
-0.06960409999010153,0.5590034965034965,"((min(past_values(worst radius, 10)) + max(past_values(mean fractal dimension, 9))) + worst texture)"
-0.1240823999978602,0.5118006993006994,"(((mean(past_values(worst concave points, 5)) + mean(past_values(worst texture, 9))) + mean(past_values(worst concavity, 5))) + max(past_values(worst area, 7)))"
-0.030535500001860783,0.48863636363636365,"max(past_values(perimeter error, 5))"
-0.008948300004703924,0.5762674825174825,worst texture
-0.06844940001610667,0.8448426573426573,"(max(past_values(symmetry error, 9)) + (max(past_values(smoothness error, 8)) + mean concavity))"
-0.008555899985367432,0.7991695804195803,perimeter error
-0.030170999991241843,0.4923513986013986,"min(past_values(worst symmetry, 7))"
-0.03212859999621287,0.576048951048951,"mean(past_values(concave points error, 6))"
-0.03254040001775138,0.53125,"mean(past_values(mean texture, 6))"
-0.030994600005215034,0.39729020979020985,"min(past_values(worst fractal dimension, 5))"
-0.009225099987816066,0.8140297202797203,worst concavity
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.030339199991431087,0.5524475524475525,"min(past_values(concave points error, 9))"
-0.008494899986544624,0.5603146853146853,worst smoothness
-0.030223800014937297,0.548513986013986,"min(past_values(worst fractal dimension, 8))"
-0.030853400006890297,0.5074300699300699,"max(past_values(mean area, 6))"
-0.03383709999616258,0.48120629370629364,"mean(past_values(perimeter error, 9))"
-0.031295099994167686,0.5019667832167832,"min(past_values(concavity error, 8))"
-0.042728900007205084,0.6748251748251748,"(smoothness error + mean(past_values(mean concavity, 6)))"
-0.03065160001278855,0.4862325174825175,"max(past_values(worst smoothness, 8))"
-0.0870543000055477,0.5539772727272727,"(max(past_values(worst fractal dimension, 5)) + (min(past_values(mean area, 9)) + max(past_values(mean concave points, 9))))"
-0.03023800000664778,0.4805506993006994,"min(past_values(symmetry error, 9))"
-0.03249859999050386,0.47421328671328666,"mean(past_values(worst fractal dimension, 8))"
-0.030565900000510737,0.5421765734265734,"min(past_values(mean fractal dimension, 10))"
-0.030739699985133484,0.47443181818181823,"min(past_values(worst radius, 9))"
-0.008555899985367432,0.7991695804195803,perimeter error
-0.04085280001163483,0.5537587412587412,"(radius error + min(past_values(worst area, 9)))"
-0.008555899985367432,0.7991695804195803,perimeter error
-0.031171999988146126,0.5747377622377622,"max(past_values(mean compactness, 10))"
-0.043248899979516864,0.3972902097902098,"(worst fractal dimension + mean(past_values(worst fractal dimension, 5)))"
-0.030967800004873425,0.5659965034965035,"max(past_values(mean area, 7))"
-0.031329299992648885,0.34287587412587417,"min(past_values(mean symmetry, 10))"
-0.009430699981749058,0.5603146853146853,worst smoothness
-0.008896199986338615,0.8986013986013986,worst area
-0.008721300022443756,0.6276223776223776,worst compactness
-0.009071600012248382,0.5603146853146853,worst smoothness
-0.08769830001983792,0.4731206293706294,"((min(past_values(mean radius, 10)) + min(past_values(mean smoothness, 6))) + min(past_values(smoothness error, 6)))"
-0.03063970000948757,0.517701048951049,"min(past_values(mean texture, 9))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.03086769999936223,0.533653846153846,"max(past_values(mean concave points, 8))"
-0.03735900000901893,0.597465034965035,"mean(past_values(mean compactness, 8))"
-0.031171999988146126,0.5747377622377622,"max(past_values(mean compactness, 10))"
-0.008790100022451952,0.8492132867132867,worst concave points
-0.008781999989878386,0.5605332167832169,compactness error
-0.035526799998478964,0.5659965034965035,"mean(past_values(mean compactness, 7))"
-0.05021330001181923,0.7687937062937062,"((worst concavity + worst fractal dimension) + max(past_values(concavity error, 9)))"
-0.031177999975625426,0.5974650349650349,"min(past_values(mean fractal dimension, 8))"
-0.03345879999687895,0.458479020979021,"mean(past_values(mean fractal dimension, 7))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.040651399991475046,0.49868881118881114,"(compactness error + min(past_values(mean texture, 9)))"
-0.030828799994196743,0.5889423076923077,"min(past_values(mean fractal dimension, 9))"
-0.03320730000268668,0.5288461538461539,"mean(past_values(mean concave points, 6))"
-0.033488000015495345,0.5364947552447552,"max(past_values(worst smoothness, 9))"
-0.030415200017159805,0.6354895104895105,"min(past_values(area error, 10))"
-0.030542499996954575,0.3863636363636364,"min(past_values(mean perimeter, 8))"
-0.11844859999837354,0.8286713286713286,"((((mean symmetry + mean area) + min(past_values(mean texture, 5))) + mean(past_values(mean radius, 9))) + mean(past_values(texture error, 7)))"
-0.03340980000211857,0.5539772727272727,"mean(past_values(radius error, 5))"
-0.039011499990010634,0.5482954545454545,"max(past_values(mean smoothness, 10))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.043912399996770546,0.826486013986014,"(mean area + mean(past_values(worst texture, 9)))"
-0.044632499979343265,0.5067744755244755,"min(past_values(mean smoothness, 5))"
-0.031965000001946464,0.5747377622377623,"min(past_values(worst area, 10))"
-0.030333099974086508,0.46743881118881125,"max(past_values(compactness error, 10))"
-0.030090499989455566,0.736013986013986,"max(past_values(worst radius, 5))"
-0.009059800009708852,0.6276223776223776,worst compactness
-0.06163770001148805,0.5605332167832169,"(max(past_values(mean compactness, 8)) + mean(past_values(mean radius, 5)))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.032255099999019876,0.5104895104895104,"mean(past_values(worst concave points, 9))"
-0.03046639999956824,0.5443618881118881,"max(past_values(worst texture, 5))"
-0.03317789998254739,0.49344405594405594,"mean(past_values(compactness error, 7))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.03261490000295453,0.621284965034965,"mean(past_values(worst area, 5))"
-0.12604289999580942,0.4549825174825175,"((((mean concave points + symmetry error) + min(past_values(symmetry error, 6))) + max(past_values(perimeter error, 7))) + min(past_values(concavity error, 8)))"
-0.008793699991656467,0.5268793706293706,mean fractal dimension
-0.11436730000423267,0.8876748251748253,"(min(past_values(smoothness error, 7)) + (((worst radius + mean radius) + max(past_values(fractal dimension error, 8))) + (compactness error + (worst fractal dimension + symmetry error))))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.008397199999308214,0.8430944055944055,mean radius
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.034644900006242096,0.6254370629370629,"max(past_values(mean smoothness, 7))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.033396200014976785,0.5640297202797203,"mean(past_values(mean area, 6))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.00835019999067299,0.5607517482517482,mean symmetry
-0.030757500004256144,0.5633741258741258,"min(past_values(mean compactness, 5))"
-0.03284719999646768,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.062161700014257804,0.465034965034965,"(max(past_values(compactness error, 5)) + mean(past_values(worst area, 9)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.029733300005318597,0.5321241258741258,"min(past_values(worst perimeter, 7))"
-0.03238039999268949,0.5738636363636364,"mean(past_values(mean area, 7))"
-0.0307877000013832,0.5856643356643356,"max(past_values(area error, 10))"
-0.03286479998496361,0.541083916083916,"mean(past_values(worst concave points, 6))"
-0.008986100001493469,0.8489947552447553,area error
-0.033147199981613085,0.4656905594405595,"mean(past_values(worst symmetry, 7))"
-0.030626599997049198,0.5019667832167832,"max(past_values(mean texture, 5))"
-0.04402480000862852,0.5795454545454546,"mean(past_values(worst perimeter, 6))"
-0.043912399996770546,0.826486013986014,"(mean area + mean(past_values(worst texture, 9)))"
-0.030229800002416596,0.5834790209790209,"max(past_values(mean radius, 7))"
-0.030567999987397343,0.6383304195804196,"min(past_values(mean concavity, 10))"
-0.029481899982783943,0.5461101398601399,"min(past_values(smoothness error, 6))"
-0.096309900021879,0.5944055944055945,"(worst concave points + (max(past_values(worst concave points, 7)) + (max(past_values(worst area, 6)) + min(past_values(smoothness error, 6)))))"
-0.034644900006242096,0.6254370629370629,"max(past_values(mean smoothness, 7))"
-0.03209130000323057,0.49562937062937074,"mean(past_values(worst concave points, 8))"
-0.03173139999853447,0.5666520979020979,"max(past_values(concavity error, 10))"
-0.029814900015480816,0.472465034965035,"min(past_values(worst radius, 5))"
-0.00877110002329573,0.8492132867132867,worst concave points
-0.008197299990570173,0.8361013986013986,mean perimeter
-0.03228300000773743,0.41083916083916083,"mean(past_values(radius error, 10))"
-0.008423499995842576,0.5911276223776224,mean texture
-0.032099700008984655,0.5279720279720279,"mean(past_values(worst fractal dimension, 9))"
-0.009068299987120554,0.5439248251748252,texture error
-0.032434399996418506,0.4453671328671329,"mean(past_values(worst symmetry, 6))"
-0.032615200005238876,0.40734265734265734,"mean(past_values(worst texture, 10))"
-0.030319000012241304,0.5625,"min(past_values(worst smoothness, 5))"
-0.032705700024962425,0.6075174825174825,"mean(past_values(smoothness error, 9))"
-0.032111500011524186,0.49344405594405594,"mean(past_values(compactness error, 7))"
-0.009125000011408702,0.5268793706293706,mean fractal dimension
-0.008857699984218925,0.5605332167832169,compactness error
-0.032255099999019876,0.5104895104895104,"mean(past_values(worst concave points, 9))"
-0.03294960001949221,0.4375,"mean(past_values(mean fractal dimension, 6))"
-0.031074300000909716,0.6636800699300699,"max(past_values(mean concavity, 8))"
-0.0329343999910634,0.5319055944055944,"mean(past_values(compactness error, 8))"
-0.029962200002046302,0.590034965034965,"min(past_values(mean concavity, 9))"
-0.034779899986460805,0.513986013986014,"mean(past_values(worst perimeter, 9))"
-0.030336600000737235,0.5718968531468531,"min(past_values(concavity error, 10))"
-0.02992539998376742,0.48972902097902105,"min(past_values(worst concavity, 6))"
-0.09928810002747923,0.5611888111888111,"(texture error + (max(past_values(worst symmetry, 6)) + (max(past_values(mean symmetry, 9)) + max(past_values(mean fractal dimension, 8)))))"
-0.04229069998837076,0.8684440559440559,"(mean area + mean(past_values(mean compactness, 5)))"
-0.0322481999755837,0.6848776223776223,"mean(past_values(mean concavity, 7))"
-0.06268219999037683,0.49344405594405594,"(mean(past_values(worst texture, 8)) + mean(past_values(mean concave points, 5)))"
-0.0337854000099469,0.5546328671328671,"mean(past_values(radius error, 8))"
-0.029840200004400685,0.5627185314685315,"max(past_values(mean symmetry, 7))"
-0.008245999983046204,0.8492132867132867,worst concave points
-0.029674099991098046,0.5528846153846154,"max(past_values(worst smoothness, 10))"
-0.03277210000669584,0.4453671328671329,"mean(past_values(worst symmetry, 6))"
-0.029986700013978407,0.6136363636363636,"max(past_values(symmetry error, 9))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.03039520001038909,0.6040209790209791,"max(past_values(mean radius, 6))"
-0.05879759998060763,0.4136800699300699,"(max(past_values(mean radius, 10)) + max(past_values(worst texture, 9)))"
-0.03148110001347959,0.3981643356643356,"max(past_values(worst symmetry, 8))"
-0.03128679998917505,0.590034965034965,"min(past_values(mean concavity, 9))"
-0.09928810002747923,0.5611888111888111,"(texture error + (max(past_values(worst symmetry, 6)) + (max(past_values(mean symmetry, 9)) + max(past_values(mean fractal dimension, 8)))))"
-0.032955900009255856,0.4558566433566434,"mean(past_values(mean smoothness, 9))"
-0.030204899987438694,0.6632430069930071,"max(past_values(mean concavity, 7))"
-0.030255200021201745,0.43028846153846145,"min(past_values(worst fractal dimension, 9))"
-0.008924599998863414,0.5911276223776224,mean texture
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.03252249999786727,0.576048951048951,"mean(past_values(concave points error, 6))"
-0.008768800005782396,0.5911276223776224,mean texture
-0.03348559999722056,0.46481643356643354,"mean(past_values(mean symmetry, 10))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.038628999987849966,0.5546328671328671,"mean(past_values(concave points error, 8))"
-0.029758499993477017,0.472465034965035,"min(past_values(worst radius, 5))"
-0.08773199998540804,0.44995629370629375,"((min(past_values(mean symmetry, 10)) + min(past_values(mean area, 9))) + max(past_values(worst radius, 6)))"
-0.031170899979770184,0.42438811188811193,"min(past_values(worst radius, 8))"
-0.008899100008420646,0.5762674825174825,worst texture
-0.059567000018432736,0.6048951048951049,"(max(past_values(worst area, 5)) + min(past_values(worst perimeter, 6)))"
-0.03067639999790117,0.3942307692307693,"min(past_values(worst compactness, 7))"
-0.008963000000221655,0.6276223776223776,worst compactness
-0.029973400000017136,0.6131993006993007,"min(past_values(worst concavity, 9))"
-0.029570999991847202,0.5413024475524476,"min(past_values(worst concavity, 8))"
-0.07142140000360087,0.6700174825174825,"((min(past_values(worst concave points, 8)) + worst compactness) + mean(past_values(mean compactness, 5)))"
-0.0300561000185553,0.5419580419580419,"min(past_values(mean area, 10))"
-0.030573299998650327,0.5085227272727273,"min(past_values(mean smoothness, 9))"
-0.03311129999929108,0.5378059440559442,"mean(past_values(worst smoothness, 5))"
-0.030165800009854138,0.5830419580419581,"min(past_values(concave points error, 8))"
-0.03019199997652322,0.4910402097902098,"max(past_values(symmetry error, 10))"
-0.06529040000168607,0.6258741258741258,"(mean(past_values(mean compactness, 5)) + mean(past_values(worst concavity, 5)))"
-0.0725238999875728,0.7609265734265734,"((radius error + mean(past_values(symmetry error, 8))) + max(past_values(mean fractal dimension, 9)))"
-0.00837259998661466,0.5762674825174825,worst texture
-0.030430999991949648,0.4698426573426574,"max(past_values(worst fractal dimension, 8))"
-0.030137800000375137,0.5771416083916084,"max(past_values(radius error, 6))"
-0.03161860001273453,0.5725524475524475,"min(past_values(worst texture, 5))"
-0.04472229999373667,0.5843531468531469,"mean(past_values(worst concave points, 5))"
-0.03280320001067594,0.5170454545454546,"mean(past_values(mean texture, 8))"
-0.03266360002453439,0.541083916083916,"mean(past_values(worst concave points, 6))"
-0.015466099983314052,0.5579108391608392,(concave points error + worst fractal dimension)
-0.06231949999346398,0.6520979020979021,"(mean(past_values(area error, 9)) + max(past_values(perimeter error, 7)))"
-0.05593480000970885,0.8627622377622377,"((max(past_values(mean fractal dimension, 5)) + mean texture) + (worst perimeter + mean perimeter))"
-0.029977600002894178,0.4781468531468531,"min(past_values(radius error, 5))"
-0.03214779999689199,0.49213286713286714,"mean(past_values(worst smoothness, 9))"
-0.07141750000300817,0.8911713286713286,"(mean(past_values(worst concave points, 6)) + (min(past_values(symmetry error, 9)) + worst radius))"
-0.03295429999707267,0.5270979020979021,"mean(past_values(texture error, 9))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.008768900006543845,0.64881993006993,concave points error
-0.07405579998157918,0.6350524475524476,"(mean(past_values(worst area, 8)) + (max(past_values(worst texture, 10)) + mean perimeter))"
-0.06315049997647293,0.6022727272727273,"(mean(past_values(mean symmetry, 6)) + mean(past_values(worst radius, 8)))"
-0.040493000007700175,0.5218531468531469,"(max(past_values(mean radius, 5)) + texture error)"
-0.03284849997726269,0.6315559440559441,"mean(past_values(mean perimeter, 6))"
-0.03011510000214912,0.44099650349650343,"min(past_values(worst fractal dimension, 6))"
-0.06341339999926277,0.54763986013986,"(mean(past_values(texture error, 9)) + min(past_values(symmetry error, 5)))"
-0.060905099991941825,0.6350524475524476,"((mean concave points + min(past_values(radius error, 8))) + worst smoothness)"
-0.07751500001177192,0.5345279720279721,"((min(past_values(fractal dimension error, 9)) + max(past_values(mean area, 10))) + (radius error + worst radius))"
-0.015099799988092855,0.8627622377622377,(compactness error + mean area)
-0.030434699991019443,0.5225087412587412,"min(past_values(area error, 6))"
-0.00883189999149181,0.5268793706293706,mean fractal dimension
-0.11376050001126714,0.5568181818181819,"(((mean(past_values(worst concave points, 10)) + (symmetry error + worst compactness)) + mean(past_values(compactness error, 7))) + max(past_values(area error, 9)))"
-0.00875189999351278,0.8631993006993006,worst radius
-0.03275990000111051,0.49956293706293703,"mean(past_values(texture error, 10))"
-0.008602799993241206,0.7312062937062938,mean compactness
-0.03134830002090894,0.5109265734265733,"max(past_values(worst symmetry, 5))"
-0.03358550000120886,0.5148601398601399,"mean(past_values(mean compactness, 10))"
-0.029932399978861213,0.5834790209790209,"max(past_values(mean radius, 7))"
-0.07256349999806844,0.9217657342657343,"((worst smoothness + ((radius error + worst concavity) + (worst concavity + mean symmetry))) + min(past_values(mean concave points, 10)))"
-0.06435520001105033,0.5659965034965035,"(mean(past_values(mean perimeter, 6)) + mean(past_values(worst radius, 7)))"
-0.03277409999282099,0.506993006993007,"mean(past_values(compactness error, 10))"
-0.032951399974990636,0.46481643356643354,"mean(past_values(mean symmetry, 10))"
-0.033172199997352436,0.6075174825174825,"mean(past_values(smoothness error, 9))"
-0.03281410000636242,0.597465034965035,"mean(past_values(worst compactness, 8))"
-0.009997000015573576,0.5607517482517482,mean symmetry
-0.04472229999373667,0.5843531468531469,"mean(past_values(worst concave points, 5))"
-0.008884900016710162,0.5605332167832169,compactness error
-0.008509199979016557,0.5616258741258742,worst symmetry
-0.00911929999710992,0.48951048951048953,symmetry error
-0.04472229999373667,0.5843531468531469,"mean(past_values(worst concave points, 5))"
-0.03273860001354478,0.4178321678321678,"mean(past_values(mean symmetry, 5))"
-0.00904810000793077,0.48951048951048953,symmetry error
-0.03249479999067262,0.5347465034965034,"mean(past_values(symmetry error, 10))"
-0.030257599981268868,0.5319055944055945,"max(past_values(worst concave points, 9))"
-0.030465799994999543,0.5753933566433567,"max(past_values(smoothness error, 10))"
-0.03267660000710748,0.5817307692307693,"mean(past_values(perimeter error, 6))"
-0.0298322000016924,0.426791958041958,"min(past_values(smoothness error, 8))"
-0.009083899989491329,0.5268793706293706,mean fractal dimension
-0.02992999998969026,0.5832604895104895,"min(past_values(mean radius, 5))"
-0.0324325000110548,0.5738636363636364,"mean(past_values(mean area, 7))"
-0.03076969998073764,0.7246503496503495,"max(past_values(worst perimeter, 5))"
-0.032533699995838106,0.42438811188811193,"mean(past_values(worst fractal dimension, 5))"
-0.05047819999163039,0.8876748251748253,"(worst area + (max(past_values(symmetry error, 6)) + mean radius))"
-0.03741300001274794,0.513986013986014,"mean(past_values(worst perimeter, 9))"
-0.008886199997505173,0.64881993006993,concave points error
-0.031204900005832314,0.47443181818181823,"min(past_values(worst radius, 9))"
-0.009266900015063584,0.5607517482517482,mean symmetry
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.061333399993600324,0.39270104895104896,"(mean(past_values(compactness error, 10)) + max(past_values(mean symmetry, 5)))"
-0.0303593999997247,0.6092657342657344,"max(past_values(worst concave points, 7))"
-0.03191510000033304,0.4178321678321678,"mean(past_values(mean symmetry, 5))"
-0.029721600003540516,0.5874125874125874,"max(past_values(mean fractal dimension, 7))"
-0.030790300021180883,0.5249125874125874,"max(past_values(concavity error, 6))"
-0.03003200000966899,0.6864073426573425,"max(past_values(mean concavity, 6))"
-0.030453200015472248,0.5590034965034966,"max(past_values(mean radius, 8))"
-0.030043399980058894,0.5273164335664335,"max(past_values(smoothness error, 6))"
-0.029962899978272617,0.5225087412587412,"min(past_values(area error, 6))"
-0.059478300012415275,0.6802884615384615,"(max(past_values(mean area, 5)) + min(past_values(fractal dimension error, 6)))"
-0.032367699983296916,0.5423951048951049,"mean(past_values(worst radius, 7))"
-0.07172960002208129,0.5773601398601399,"((worst smoothness + min(past_values(mean radius, 9))) + min(past_values(smoothness error, 10)))"
-0.03035209997324273,0.5410839160839161,"max(past_values(mean radius, 9))"
-0.0091592000098899,0.8430944055944055,mean radius
-0.008886199997505173,0.64881993006993,concave points error
-0.030404799996176735,0.5255681818181819,"max(past_values(radius error, 10))"
-0.029410199989797547,0.5410839160839161,"max(past_values(mean radius, 9))"
-0.008886199997505173,0.64881993006993,concave points error
-0.008886199997505173,0.64881993006993,concave points error
-0.032468499994138256,0.5118006993006994,"mean(past_values(worst texture, 7))"
-0.0933748000243213,0.624562937062937,"((max(past_values(smoothness error, 7)) + mean(past_values(mean smoothness, 7))) + mean(past_values(mean area, 9)))"
-0.00901549999252893,0.5268793706293706,mean fractal dimension
-0.008886199997505173,0.64881993006993,concave points error
-0.029594599996926263,0.458041958041958,"min(past_values(mean perimeter, 9))"
-0.03691519997664727,0.6092657342657344,"max(past_values(worst concave points, 7))"
-0.06306650000624359,0.6057692307692308,"(mean(past_values(worst concavity, 10)) + mean(past_values(worst concave points, 5)))"
-0.06267040001694113,0.48863636363636365,"(mean(past_values(mean texture, 10)) + min(past_values(worst texture, 10)))"
-0.031133699987549335,0.5284090909090908,"max(past_values(fractal dimension error, 9))"
-0.04167589999269694,0.6955856643356643,"(mean symmetry + mean(past_values(mean concave points, 7)))"
-0.04000820001238026,0.8457167832167831,"(min(past_values(symmetry error, 5)) + mean radius)"
-0.029671099997358397,0.511145104895105,"min(past_values(symmetry error, 10))"
-0.030201599991414696,0.34287587412587417,"min(past_values(mean symmetry, 10))"
-0.05893119997926988,0.6475087412587412,"(max(past_values(worst compactness, 10)) + min(past_values(worst compactness, 5)))"
-0.03307269999640994,0.5909090909090908,"mean(past_values(worst perimeter, 7))"
-0.00865990002057515,0.8361013986013986,mean perimeter
-0.03254179999930784,0.5043706293706294,"mean(past_values(mean texture, 5))"
-0.058543399994960055,0.5552884615384615,"(min(past_values(mean perimeter, 7)) + max(past_values(mean symmetry, 10)))"
-0.008886199997505173,0.64881993006993,concave points error
-0.03320410000742413,0.5279720279720279,"mean(past_values(texture error, 6))"
-0.009270000009564683,0.5603146853146853,worst smoothness
-0.008770699991146103,0.7991695804195803,perimeter error
-0.033222499972907826,0.541083916083916,"mean(past_values(worst concave points, 6))"
-0.030828899994958192,0.6136363636363636,"max(past_values(symmetry error, 9))"
-0.0583489999989979,0.649256993006993,"(min(past_values(mean texture, 5)) + min(past_values(mean smoothness, 6)))"
-0.0734768999973312,0.5852272727272727,"((worst concave points + min(past_values(mean area, 5))) + mean(past_values(worst concavity, 5)))"
-0.029432400013320148,0.6343968531468531,"max(past_values(mean compactness, 9))"
-0.009084599994821474,0.5268793706293706,mean fractal dimension
-0.0298381999891717,0.5533216783216783,"min(past_values(texture error, 9))"
-0.07204440000350587,0.8094405594405595,"((((worst fractal dimension + worst texture) + (area error + mean smoothness)) + texture error) + min(past_values(concavity error, 10)))"
+Eval Time,F1 Score,Expression
+1.5917969000292942,0.0,"mean(past_values(V3, 8))"
+1.4365992000093684,0.0,"min(past_values(V27, 5))"
+0.3821579000214115,0.10526315789473684,V18
+2.7641810000059195,0.0,"(max(past_values(V11, 9)) + min(past_values(V28, 5)))"
+1.441718199988827,0.0,"min(past_values(V6, 5))"
+0.4227650999673642,0.0,V25
+1.5288992999703623,0.0,"mean(past_values(V3, 5))"
+1.4178657999727875,0.0,"min(past_values(V4, 5))"
+1.571345400006976,0.0,"mean(past_values(V5, 5))"
+1.422843800042756,0.0,"min(past_values(V19, 8))"
+1.4879674999974668,0.0,"min(past_values(V27, 5))"
+2.9178623000043444,0.0,"(max(past_values(V1, 8)) * min(past_values(V17, 8)))"
+4.865326999977697,0.3157894736842105,"(min(past_values(V11, 7)) * ((V22 + mean(past_values(V24, 5))) - ((V12 + V17) + V22)))"
+2.050167799985502,0.0,"(mean(past_values(V13, 9)) + Amount)"
+3.01508240000112,0.0,"(mean(past_values(V1, 7)) * min(past_values(V7, 9)))"
+1.4520747999777086,0.0,"max(past_values(V18, 9))"
+5.478059899993241,0.0,"(mean(past_values(V15, 6)) - (((V2 + V13) - max(past_values(V6, 6))) * mean(past_values(V16, 10))))"
+1.538157399976626,0.0,"mean(past_values(V26, 7))"
+2.996969599975273,0.0,"(mean(past_values(V20, 5)) - min(past_values(V21, 8)))"
+2.972869899997022,0.0,"(mean(past_values(V3, 9)) + min(past_values(V3, 8)))"
+0.3821579000214115,0.10526315789473684,V18
+6.5652278999914415,0.0,"(((mean(past_values(V25, 9)) - (V24 * V12)) * ((V3 - Amount) + min(past_values(V12, 5)))) - (min(past_values(V16, 5)) - V1))"
+2.0044619999825954,0.16666666666666666,"(mean(past_values(V19, 10)) + V10)"
+3.113738399988506,0.0,"((((V6 + V11) + min(past_values(V23, 8))) * V19) - V9)"
+0.3745877000037581,0.0,V24
+2.9765351000241935,0.0,"(min(past_values(Amount, 6)) + mean(past_values(V18, 6)))"
+4.320260700013023,0.0,"(V2 + ((V12 - mean(past_values(V10, 6))) + (V8 * min(past_values(V11, 10)))))"
+0.3921860000118613,0.0,V22
+3.324470999999903,0.0,"((min(past_values(V4, 8)) * V8) + max(past_values(V10, 8)))"
+3.089797599997837,0.0,"(((V25 * (V19 * V4)) - V14) + min(past_values(V17, 5)))"
+1.4062638999894261,0.0,"max(past_values(V5, 6))"
+1.422843800042756,0.0,"min(past_values(V19, 8))"
+1.422843800042756,0.0,"min(past_values(V19, 8))"
+1.3968103000079282,0.0,"max(past_values(V13, 5))"
+3.483245800016448,0.0,"((min(past_values(V10, 5)) * V23) + mean(past_values(V8, 10)))"
+5.013895899988711,0.09090909090909091,"((V28 + ((Amount + V13) - V13)) - ((V8 - min(past_values(V15, 6))) * min(past_values(V17, 5))))"
+4.959030999976676,0.0,"(V2 - ((min(past_values(V12, 6)) * min(past_values(V15, 9))) - mean(past_values(V4, 8))))"
+5.334475999989081,0.0,"(max(past_values(V11, 5)) * ((max(past_values(V5, 5)) * (V14 - V13)) * mean(past_values(V24, 5))))"
+0.3701316000078805,0.0,V7
+1.5361113999970257,0.0,"mean(past_values(V5, 5))"
+0.3821579000214115,0.10526315789473684,V18
+0.37210510001750663,0.0,V23
+0.3723201000248082,0.0,V27
+4.320260700013023,0.0,"(V2 + ((V12 - mean(past_values(V10, 6))) + (V8 * min(past_values(V11, 10)))))"
+4.320260700013023,0.0,"(V2 + ((V12 - mean(past_values(V10, 6))) + (V8 * min(past_values(V11, 10)))))"
+1.4034773000166751,0.0,"max(past_values(V1, 8))"
+3.483245800016448,0.0,"((min(past_values(V10, 5)) * V23) + mean(past_values(V8, 10)))"
+1.38778699998511,0.0,"max(past_values(V6, 9))"
+0.377990199951455,0.0,V27
+2.018240900011733,0.0,"(V9 * mean(past_values(V26, 9)))"
+4.224785700032953,0.0,"(V2 + ((min(past_values(V14, 6)) + (V10 * V1)) - max(past_values(V10, 9))))"
+9.612867399991956,0.0,"((((V27 + V23) - mean(past_values(V28, 10))) * ((V7 + V23) * max(past_values(V15, 5)))) * (((V3 * V23) + max(past_values(V19, 10))) * ((V15 + Amount) * max(past_values(V22, 5)))))"
+0.374145999958273,0.0,V20
+4.331437699962407,0.0,"((max(past_values(V26, 10)) - mean(past_values(V2, 6))) - max(past_values(V14, 10)))"
+1.876989499956835,0.11764705882352941,"(min(past_values(V14, 6)) + V23)"
+8.294973200012464,0.0,"((mean(past_values(V2, 9)) - min(past_values(V7, 6))) * ((min(past_values(V12, 10)) - max(past_values(V1, 7))) - ((V15 + V17) + mean(past_values(Amount, 9)))))"
+1.8868442000239156,0.0,"(max(past_values(V22, 9)) * V22)"
+3.6276462000096217,0.05405405405405406,"((min(past_values(V26, 10)) + ((V11 * Amount) - (V17 - V25))) + V5)"
+0.3738102000206709,0.0,V6
+8.13747150002746,0.0,"((min(past_values(V8, 5)) * ((V9 + V16) + max(past_values(V25, 8)))) - (max(past_values(V24, 6)) - (max(past_values(V26, 10)) * mean(past_values(V12, 5)))))"
+0.3821579000214115,0.10526315789473684,V18
+0.37490400002570823,0.0,V24
+1.3918614000431262,0.0,"min(past_values(V11, 9))"
+1.4103893999708816,0.0,"max(past_values(V20, 8))"
+1.4034935000236146,0.0,"max(past_values(V18, 6))"
+3.2840926000499167,0.0,"((V26 * min(past_values(V21, 8))) * max(past_values(V15, 8)))"
+1.4029900000314228,0.0,"min(past_values(V21, 8))"
+1.5713033000356518,0.0,"mean(past_values(V13, 9))"
+1.3892314999829978,0.0,"max(past_values(V6, 10))"
+3.2628564000478946,0.0,"((max(past_values(V23, 8)) + min(past_values(V25, 7))) + V22)"
+4.331437699962407,0.0,"((max(past_values(V26, 10)) - mean(past_values(V2, 6))) - max(past_values(V14, 10)))"
+4.8104458000161685,0.0,"(((V5 + max(past_values(V26, 7))) - max(past_values(V12, 10))) + mean(past_values(V15, 10)))"
+1.3844252999988385,0.0,"max(past_values(V10, 6))"
+1.5379681999911554,0.0,"mean(past_values(V25, 6))"
+1.3945855000056326,0.0,"max(past_values(V20, 10))"
+1.3946358999819495,0.0,"min(past_values(V4, 6))"
+1.391220899997279,0.0,"max(past_values(V14, 6))"
+3.398816999979317,0.0,"(max(past_values(V22, 7)) + (Amount + mean(past_values(V21, 5))))"
+1.8528281999751925,0.0,"(V10 + min(past_values(V1, 9)))"
+6.965939999965485,0.0,"(((max(past_values(V16, 10)) - mean(past_values(V10, 10))) - (Amount + (V8 - V6))) - (min(past_values(V17, 6)) + max(past_values(V7, 6))))"
+0.3821579000214115,0.10526315789473684,V18
+7.476947300019674,0.0,"(((V3 - mean(past_values(V17, 7))) + max(past_values(V1, 10))) * ((min(past_values(V8, 6)) * mean(past_values(V9, 9))) - ((V23 + V26) - V8)))"
+4.331437699962407,0.0,"((max(past_values(V26, 10)) - mean(past_values(V2, 6))) - max(past_values(V14, 10)))"
+0.36823439999716356,0.06666666666666667,V9
+1.973966199962888,0.0,"(mean(past_values(V8, 6)) - V20)"
+0.37672420003218576,0.0,V8
+4.225589899986517,0.0,"(V10 * (mean(past_values(V18, 10)) + (max(past_values(V23, 5)) * (V7 + V28))))"
+1.3999322999734432,0.0,"max(past_values(V26, 8))"
+4.8123324000043795,0.0,"((max(past_values(V5, 5)) * V11) + (((V18 * V10) - (V9 + V21)) + max(past_values(V2, 10))))"
+1.391220899997279,0.0,"max(past_values(V14, 6))"
+1.391220899997279,0.0,"max(past_values(V14, 6))"
+0.372054300038144,0.0,V28
+1.381156200019177,0.0,"min(past_values(V21, 9))"
+5.589509699959308,0.0,"(min(past_values(V19, 7)) - (max(past_values(V19, 10)) * (max(past_values(V21, 8)) - min(past_values(V6, 10)))))"
+5.905517900013365,0.0,"(mean(past_values(V13, 10)) - ((V24 + mean(past_values(V5, 10))) * ((V16 + V6) - min(past_values(V12, 9)))))"
+1.3916739999549463,0.0,"max(past_values(V11, 5))"
+4.141079899971373,0.0,"(max(past_values(V3, 10)) * (max(past_values(V13, 10)) + max(past_values(V8, 8))))"
+1.391220899997279,0.0,"max(past_values(V14, 6))"
+1.393901499977801,0.0,"max(past_values(V8, 5))"
+1.3803435000008903,0.0,"min(past_values(V7, 10))"
+0.3821579000214115,0.10526315789473684,V18
+0.3754198999959044,0.0,V13
+5.876624499971513,0.0,"(mean(past_values(V1, 5)) + (max(past_values(V28, 7)) - (max(past_values(V23, 9)) - mean(past_values(V12, 10)))))"
+4.303061300015543,0.0,"((max(past_values(V18, 10)) - (V22 * (V5 - V11))) + mean(past_values(V14, 10)))"
+0.3935180000262335,0.05714285714285714,V21
+3.911453499982599,0.0,"((V13 * (mean(past_values(V16, 6)) - V11)) + min(past_values(V7, 6)))"
+1.391194199968595,0.0,"min(past_values(V22, 9))"
+3.0084019000059925,0.0,"(max(past_values(V16, 8)) - mean(past_values(V15, 10)))"
+0.36154370004078373,0.0,V24
+0.37672420003218576,0.0,V8
+4.863857099961024,0.0,"(((V25 * (V12 + Amount)) * ((V8 - V10) + min(past_values(V5, 7)))) * max(past_values(V4, 9)))"
+1.52085100003751,0.0,"mean(past_values(V28, 6))"
+1.3966568000032566,0.0,"max(past_values(V3, 6))"
+2.8341681000310928,0.0,"(max(past_values(V3, 8)) - max(past_values(V5, 7)))"
+4.805949800007511,0.0,"((max(past_values(V10, 7)) + mean(past_values(V15, 8))) - (max(past_values(V10, 9)) * V25))"
+2.9458283000276424,0.0,"(max(past_values(V28, 5)) * mean(past_values(Amount, 8)))"
+1.3915790999890305,0.0,"max(past_values(Amount, 10))"
+4.381720800010953,0.0,"((max(past_values(V5, 6)) * max(past_values(V27, 9))) + mean(past_values(V25, 8)))"
+3.963327100034803,0.0,"(mean(past_values(V7, 10)) + ((V4 - (V28 * V6)) + (V16 * (V8 + V2))))"
+2.794288300035987,0.0,"(max(past_values(Amount, 7)) - min(past_values(V18, 6)))"
+0.3821579000214115,0.10526315789473684,V18
+5.070852899982128,0.0,"(((max(past_values(V25, 6)) * (V27 + V24)) * max(past_values(V20, 8))) * max(past_values(V1, 8)))"
+1.3962145000114106,0.0,"max(past_values(V14, 9))"
+1.377671999973245,0.0,"min(past_values(V17, 10))"
+5.080227200000081,0.14285714285714285,"((max(past_values(V22, 10)) * ((V9 - Amount) + min(past_values(V4, 10)))) - min(past_values(V12, 7)))"
+0.37494800001149997,0.16666666666666666,V10
+7.522443699999712,0.07142857142857142,"((min(past_values(V4, 5)) + (max(past_values(V16, 5)) + (V18 - Amount))) + ((min(past_values(V16, 5)) * (V23 + V28)) + max(past_values(V22, 8))))"
+0.3642721999785863,0.25,V12
+1.409514200000558,0.0,"min(past_values(V21, 10))"
+1.3880906000267714,0.0,"min(past_values(V14, 5))"
+0.3767519000102766,0.0,V2
+5.773349899973255,0.0,"(((max(past_values(V2, 9)) - mean(past_values(V25, 5))) + max(past_values(V2, 10))) - max(past_values(V2, 6)))"
+1.52085100003751,0.0,"mean(past_values(V28, 6))"
+0.36317859997507185,0.25,V12
+0.3786060000420548,0.0,V8
+1.4999236000003293,0.0,"mean(past_values(V20, 5))"
+1.52085100003751,0.0,"mean(past_values(V28, 6))"
+7.700657099951059,0.0,"(((min(past_values(V13, 8)) * (Amount * V7)) - max(past_values(V28, 8))) + (mean(past_values(V8, 5)) - ((V15 * V27) + mean(past_values(V5, 10)))))"
+0.3629087000153959,0.16666666666666666,V10
+4.863857099961024,0.0,"(((V25 * (V12 + Amount)) * ((V8 - V10) + min(past_values(V5, 7)))) * max(past_values(V4, 9)))"
+0.36317859997507185,0.25,V12
+1.40792440000223,0.0,"max(past_values(V16, 10))"
+5.510796000016853,0.0,"(min(past_values(V1, 8)) - ((min(past_values(V20, 8)) + min(past_values(V12, 9))) + max(past_values(V11, 10))))"
+1.3871044000261463,0.0,"max(past_values(V14, 6))"
+2.7577002000180073,0.0,"(min(past_values(V27, 8)) * max(past_values(V20, 7)))"
+1.3968416000134312,0.0,"min(past_values(V9, 7))"
+1.3902940000407398,0.0,"max(past_values(V24, 7))"
+1.379600299987942,0.0,"max(past_values(V2, 6))"
+1.3811297999927774,0.0,"max(past_values(V8, 10))"
+1.5210724000353366,0.0,"mean(past_values(V18, 9))"
+6.251466099987738,0.0,"(((min(past_values(V23, 10)) * mean(past_values(V16, 10))) + max(past_values(V16, 6))) + (V22 * max(past_values(V22, 5))))"
+2.2951210000319406,0.04,"(min(past_values(V2, 10)) + (V12 * V27))"
+1.3808182999491692,0.0,"min(past_values(V9, 5))"
+7.414374099986162,0.0,"(((mean(past_values(V24, 10)) - mean(past_values(V28, 8))) + min(past_values(V1, 8))) - (V9 + (mean(past_values(V12, 6)) * (V24 + V22))))"
+1.376966000010725,0.0,"max(past_values(V21, 8))"
+4.11816849996103,0.0,"((min(past_values(V18, 7)) * min(past_values(V23, 9))) - min(past_values(V18, 7)))"
+1.8795502000139095,0.0,"(max(past_values(V20, 9)) - V25)"
+1.3830017000436783,0.0,"max(past_values(V27, 5))"
+4.207410599978175,0.0,"((V9 * ((V1 * V27) + mean(past_values(V20, 6)))) - min(past_values(V10, 7)))"
+1.52085100003751,0.0,"mean(past_values(V28, 6))"
+0.36317859997507185,0.25,V12
+5.097935800033156,0.0,"(mean(past_values(V6, 10)) + ((V22 - mean(past_values(V24, 9))) * min(past_values(V28, 8))))"
+9.338932099984959,0.0,"(((max(past_values(V3, 7)) - mean(past_values(V28, 5))) - mean(past_values(V24, 6))) - ((max(past_values(V3, 6)) * mean(past_values(V12, 8))) * (V11 * max(past_values(V21, 5)))))"
+3.470637299993541,0.0,"((V7 + min(past_values(V15, 9))) * mean(past_values(V7, 10)))"
+2.8008595000137575,0.0,"(max(past_values(V14, 8)) * max(past_values(V10, 5)))"
+0.3785879000206478,0.0,V27
+1.3840617999667302,0.0,"min(past_values(V13, 9))"
+1.399174900026992,0.0,"max(past_values(V6, 8))"
+1.4082029000273906,0.0,"min(past_values(V2, 8))"
+5.749578799994197,0.0,"((max(past_values(V11, 9)) * mean(past_values(V18, 6))) - (max(past_values(V4, 8)) + min(past_values(V13, 9))))"
+0.3824935000156984,0.06666666666666667,V9
+3.4414289999986067,0.0,"((((V2 + V17) * (V22 - V9)) * min(past_values(V26, 9))) * V28)"
+1.4135432000039145,0.0,"max(past_values(V24, 8))"
+6.994920599972829,0.0,"(((min(past_values(V7, 8)) - mean(past_values(V9, 10))) - min(past_values(V8, 7))) * ((max(past_values(V18, 5)) + (Amount * V24)) - V1))"
+8.466564600006677,0.0,"((min(past_values(V5, 8)) * ((V15 - V27) - mean(past_values(Amount, 10)))) * (((V20 * V21) * (V19 + V6)) + (mean(past_values(V16, 10)) - max(past_values(V9, 5)))))"
+1.3784929999965243,0.0,"min(past_values(V18, 10))"
+1.3811297999927774,0.0,"max(past_values(V8, 10))"
+0.3741734000504948,0.0,V23
+6.265527400013525,0.10526315789473684,"(mean(past_values(V21, 6)) * (((V24 * V20) + mean(past_values(V25, 8))) - ((V11 * V27) * max(past_values(V9, 10)))))"
+0.37382480001542717,0.0,V24
+0.36317859997507185,0.25,V12
+1.4000897000078112,0.0,"max(past_values(V9, 9))"
+6.367171899997629,0.0,"((((V7 + V15) - min(past_values(V3, 5))) * V19) * (max(past_values(V17, 6)) - (max(past_values(V8, 9)) + (V25 * Amount))))"
+1.4099545999779366,0.0,"min(past_values(V5, 9))"
+5.331409300037194,0.0,"((V1 - max(past_values(V16, 5))) - (mean(past_values(V15, 6)) * (V17 * min(past_values(V24, 6)))))"
+1.3857091999961995,0.0,"max(past_values(V13, 5))"
+1.5393746999907307,0.0,"mean(past_values(V17, 6))"
+5.572228400036693,0.0,"((mean(past_values(V7, 6)) * min(past_values(V1, 6))) + ((min(past_values(V14, 9)) + (V8 - V7)) - V5))"
+4.3020040999981575,0.0,"(((mean(past_values(V12, 7)) * (V2 + V24)) + V7) - max(past_values(V14, 6)))"
+0.39362739998614416,0.0,V5
+2.8278903999598697,0.0,"(min(past_values(V18, 6)) * max(past_values(V2, 9)))"
+0.3741734000504948,0.0,V23
+0.3741734000504948,0.0,V23
+5.387045799987391,0.0,"((((V26 * V10) * (V10 * V23)) + (min(past_values(V13, 7)) + (V26 + V13))) * min(past_values(V4, 9)))"
+5.986772699980065,0.0,"((max(past_values(V12, 5)) * (mean(past_values(V17, 5)) - mean(past_values(V17, 7)))) - mean(past_values(V19, 5)))"
+0.36448879999807104,0.0,V24
+0.3741734000504948,0.0,V23
+1.5287976000108756,0.07692307692307693,"mean(past_values(V16, 8))"
+0.3741734000504948,0.0,V23
+8.372322199982591,0.06666666666666667,"((min(past_values(V11, 8)) * ((V20 * V16) - mean(past_values(V10, 8)))) + ((max(past_values(V14, 9)) + (V6 * Amount)) + ((V4 + V9) * max(past_values(V12, 5)))))"
+0.36317859997507185,0.25,V12
+1.4118210999877192,0.0,"max(past_values(V27, 10))"
+1.540750999993179,0.0,"mean(past_values(V5, 10))"
+2.8313670000061393,0.0,"(min(past_values(V1, 10)) - max(past_values(V10, 9)))"
+1.5393746999907307,0.0,"mean(past_values(V17, 6))"
+2.891331300023012,0.0,"(min(past_values(V2, 8)) - min(past_values(V20, 6)))"
+1.607794500014279,0.0,"mean(past_values(V19, 7))"
+3.4167463000048883,0.0,"((min(past_values(V23, 5)) - mean(past_values(V4, 10))) * V23)"
+1.371297100035008,0.0,"max(past_values(Amount, 5))"
+1.4000897000078112,0.0,"max(past_values(V9, 9))"
+1.5175803999882191,0.0,"mean(past_values(V1, 8))"
+0.698329399980139,0.0,(V1 - V26)
+4.312855999975,0.0,"((min(past_values(V10, 6)) + min(past_values(V24, 6))) - mean(past_values(V10, 6)))"
+2.9373091000015847,0.0,"(mean(past_values(V24, 6)) - min(past_values(V2, 5)))"
+4.432391999987885,0.0,"((mean(past_values(V24, 10)) * max(past_values(V2, 8))) - mean(past_values(V1, 8)))"
+1.5733013999997638,0.0,"mean(past_values(V1, 6))"
+1.3949935999698937,0.0,"min(past_values(V15, 10))"
+1.4000897000078112,0.0,"max(past_values(V9, 9))"
+1.4131093000178225,0.0,"max(past_values(V23, 8))"
+0.3914939999813214,0.0,V22
+0.36317859997507185,0.25,V12
+7.759214400022756,0.0,"((min(past_values(V8, 8)) - max(past_values(V28, 7))) + (((V4 + V2) * mean(past_values(V23, 7))) * (max(past_values(V9, 8)) + (V13 + V1))))"
+0.37799660000018775,0.0,V23
+5.735774900007527,0.09523809523809523,"(((max(past_values(V7, 9)) + (V3 * V16)) * min(past_values(V9, 10))) - (((V7 - V2) + (V2 * V25)) - V3))"
+1.3954828000278212,0.0,"min(past_values(V9, 10))"
+1.3812329999636859,0.0,"max(past_values(V14, 5))"
+2.787369600031525,0.0,"(min(past_values(V10, 8)) - min(past_values(V3, 6)))"
+5.652765900013037,0.0,"((((V4 + V14) * V24) - (max(past_values(V4, 10)) * mean(past_values(V17, 6)))) - max(past_values(V25, 9)))"
+3.5452594999806024,0.0,"(V21 + (mean(past_values(V15, 5)) * max(past_values(Amount, 10))))"
+3.4167463000048883,0.0,"((min(past_values(V23, 5)) - mean(past_values(V4, 10))) * V23)"
+1.8634631999884732,0.0,"(min(past_values(V7, 8)) + V10)"
+3.4167463000048883,0.0,"((min(past_values(V23, 5)) - mean(past_values(V4, 10))) * V23)"
+1.5032027999986894,0.0,"mean(past_values(V10, 5))"
+5.947971899993718,0.0,"(((mean(past_values(V16, 7)) * (V18 + V27)) - ((V7 + V23) + min(past_values(V14, 5)))) + min(past_values(V2, 9)))"
+1.3827459000167437,0.0,"max(past_values(V1, 5))"
+1.3811473000096157,0.0,"min(past_values(V18, 10))"
+4.318170299986377,0.0,"((((V24 * V24) - mean(past_values(V5, 9))) * V22) - min(past_values(V13, 9)))"
+3.4167463000048883,0.0,"((min(past_values(V23, 5)) - mean(past_values(V4, 10))) * V23)"
+4.114327499992214,0.0,"((max(past_values(V2, 10)) - min(past_values(V24, 9))) + min(past_values(V8, 6)))"
+1.3992456999840215,0.0,"min(past_values(V15, 5))"
+0.36317859997507185,0.25,V12
+5.631434499984607,0.125,"(mean(past_values(V11, 10)) - ((max(past_values(V2, 5)) - max(past_values(V10, 5))) - (V3 + (V16 * V2))))"
+0.3742014999734238,0.0,V28
+1.384320300014224,0.0,"max(past_values(V28, 6))"
+1.3785716000129469,0.0,"max(past_values(V8, 9))"
+0.36617349996231496,0.16666666666666666,V10
+1.3845101000042632,0.0,"min(past_values(V18, 6))"
+3.211007600009907,0.0,"((min(past_values(V22, 10)) * max(past_values(V25, 9))) + V26)"
+0.3720192000037059,0.0,V24
+1.3766841000178829,0.0,"min(past_values(V24, 5))"
+5.288945699983742,0.0,"(max(past_values(V5, 8)) - (mean(past_values(V11, 5)) + ((V22 - V15) + mean(past_values(V2, 7)))))"
+1.3811473000096157,0.0,"min(past_values(V18, 10))"
+3.4567431999603286,0.0,"((mean(past_values(V1, 7)) - V11) - min(past_values(V17, 9)))"
+0.3704699000227265,0.0,V24
+1.5696250000037253,0.0,"mean(past_values(V23, 8))"
+1.4228577999747358,0.0,"min(past_values(V17, 9))"
+2.342529100016691,0.0,"(V26 - (min(past_values(V23, 10)) - V20))"
+5.079000400030054,0.25,"((((V23 + V28) + min(past_values(V12, 10))) * ((V17 + Amount) + V6)) + min(past_values(V21, 9)))"
+1.3811473000096157,0.0,"min(past_values(V18, 10))"
+1.5574899999774061,0.0,"mean(past_values(V6, 7))"
+0.36317859997507185,0.25,V12
+0.3832251999992877,0.0,V13
+2.852872200019192,0.0,"(max(past_values(Amount, 5)) * max(past_values(V23, 5)))"
+1.5661277999752201,0.0,"mean(past_values(V24, 7))"
+4.843492099957075,0.0,"(mean(past_values(V15, 10)) - ((min(past_values(V5, 6)) + V21) * max(past_values(V1, 10))))"
+2.960227900010068,0.0,"(mean(past_values(V7, 6)) * min(past_values(V15, 8)))"
+1.8819459999795072,0.0,"(max(past_values(V13, 10)) - Amount)"
+0.3732367999618873,0.0,V13
+1.3927111999946646,0.0,"max(past_values(V7, 6))"
+1.5105807000072673,0.0,"mean(past_values(V21, 7))"
+0.357614399981685,0.25,V12
+1.3811473000096157,0.0,"min(past_values(V18, 10))"
+5.562815100012813,0.0,"((max(past_values(V10, 7)) * min(past_values(V19, 6))) * (min(past_values(V1, 7)) + max(past_values(V15, 8))))"
+4.793631899985485,0.0,"((((V3 + V5) - (V4 * V27)) - ((V18 + V14) + (V25 + V11))) + mean(past_values(V12, 8)))"
+4.8596709000412375,0.0,"((max(past_values(V14, 9)) + mean(past_values(V13, 6))) - (min(past_values(V12, 10)) - V1))"
+4.149571500020102,0.0,"((min(past_values(V12, 7)) * min(past_values(V23, 8))) + min(past_values(V13, 8)))"
+1.5286707999766804,0.0,"mean(past_values(V7, 8))"
+1.3811473000096157,0.0,"min(past_values(V18, 10))"
+4.261562000028789,0.0,"(((V2 - (V25 - V13)) - mean(past_values(V4, 8))) - min(past_values(V28, 8)))"
+1.891000300005544,0.0,"(max(past_values(V25, 10)) + V7)"
