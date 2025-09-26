@@ -1,52 +1,23 @@
 import pandas as pd
-import numpy as np
-from datetime import datetime
+import argparse
 
-N_TRANSACTIONS = 2000
-FRAUD_PROB = 0.02
-USER_AVG_AMT = 45.50
-USER_AVG_TIME_BETWEEN_TXNS_HRS = 18.0
-USER_HOME_LAT = 38.7223
-USER_HOME_LON = -9.1393
+def fraction_type(x):
+    try:
+        value = int(x)
+        if not (0 < value <= 100):
+            raise argparse.ArgumentTypeError("Fraction must be an integer between 1 and 100.")
+        return value / 100.0
+    except ValueError:
+        raise argparse.ArgumentTypeError("Fraction must be an integer between 1 and 100.")
+parser = argparse.ArgumentParser()
 
-transactions = []
+parser.add_argument('fraction_percentage', type=fraction_type, help="Fraction of the dataset to keep (1-100)")
+args = parser.parse_args()
+fraction = args.fraction_percentage
 
-last_txn_time = datetime(2025, 1, 1)
-balance = 5000.0
-last_lat, last_lon = USER_HOME_LAT, USER_HOME_LON
-last_txn_timestamp = last_txn_time
+df = pd.read_csv('creditcard.csv') #https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+df.drop(columns=['Time'], inplace=True)
+n_rows_keep = int(len(df) * fraction)
+df = df.head(n_rows_keep).copy()
 
-for _ in range(N_TRANSACTIONS):
-    is_fraud = False
-    if np.random.rand() < FRAUD_PROB:
-        is_fraud = True
-        amount = USER_AVG_AMT * np.random.uniform(5, 20)
-        lat, lon = np.random.uniform(50, 52), np.random.uniform(0, 2)
-        transactionduration = np.random.uniform(0.01, 0.5)
-    else:
-        amount = np.random.lognormal(mean=np.log(USER_AVG_AMT), sigma=0.6)
-        lat = last_lat + np.random.normal(0, 0.05)
-        lon = last_lon + np.random.normal(0, 0.05)
-        transactionduration = np.random.exponential(scale=USER_AVG_TIME_BETWEEN_TXNS_HRS)
-
-    transactions.append({
-        'amount': round(amount, 2),
-        'balance_before_txn': round(balance, 2),
-        'balance': round(balance - amount, 2),
-        'is_fraud': int(is_fraud),
-        'transactionduration': round(float(transactionduration), 4)
-    })
-
-    balance -= amount
-    last_lat, last_lon = lat, lon
-
-dataset = pd.DataFrame(transactions)
-dataset = dataset[['amount', 'balance_before_txn', 'balance', 'transactionduration', 'is_fraud']]
-
-print("Generated Dataset Snippet:")
-print(dataset.head())
-
-print(f"\nTotal transactions generated: {len(dataset)}")
-print(f"Fraudulent transactions: {dataset['is_fraud'].sum()} ({dataset['is_fraud'].mean() * 100:.2f}%)")
-
-dataset.to_csv('fraud_dataset.csv', index=False)
+df.to_csv(f'creditcard_small_{int(fraction*100)}.csv', index=False)
