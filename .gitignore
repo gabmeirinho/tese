@@ -2,3 +2,4 @@
 gp_outputs/
 .env
 *.csv
+*.txt
