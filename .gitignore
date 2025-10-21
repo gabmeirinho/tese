@@ -1,3 +1,4 @@
+__pycache__/
 .venv/
 project/
 papers/
@@ -5,4 +6,3 @@ papers/
 base.csv
 *.txt
 *.sh
-__pycache__/
