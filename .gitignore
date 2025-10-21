@@ -5,3 +5,4 @@ papers/
 base.csv
 *.txt
 *.sh
+__pycache__/
