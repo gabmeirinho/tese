@@ -1,6 +1,7 @@
 .venv/
 project/
+papers/
 .env
-*.csv
+base.csv
 *.txt
 *.sh
