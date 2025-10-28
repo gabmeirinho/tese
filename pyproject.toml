@@ -6,11 +6,24 @@ authors=[
     {name="Gabriel Meirinho", email="gsilva.meirinho@gmail.com"}
 ]
 dependencies = [
+    "geneticengine",
     "ipykernel>=6.30.1",
     "matplotlib>=3.10.6",
     "numpy>=2.2.6",
+    "optuna",
     "pandas>=2.3.1",
+    "pyyaml",
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
+    "aequitas",
+]
+
+[tool.uv.sources]
+geneticengine = {path = "../GeneticEngine", editable=true}
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.1",
+    "uv>=0.9.5",
 ]
 

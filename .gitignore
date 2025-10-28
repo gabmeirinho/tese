@@ -3,6 +3,8 @@ __pycache__/
 project/
 papers/
 .env
-base.csv
+*.csv
+*.pdf
 *.txt
 *.sh
+*.egg-info
