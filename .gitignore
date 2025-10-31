@@ -1,10 +1,6 @@
 __pycache__/
 .venv/
-project/
-papers/
-.env
 *.csv
-*.pdf
 *.txt
 *.sh
 *.egg-info
