@@ -70,7 +70,27 @@ model_used = lgb.LGBMClassifier(n_estimators=350, max_depth=14, learning_rate=0.
 # model_used = RandomForestClassifier(random_state=42, n_estimators=30, n_jobs=-1)
 target_fpr_value = 0.05
 
-df_orig = pd.read_csv('base.csv')
+for attemp in range(3):
+    try:
+        if os.path.exists('base.csv'):
+            df_orig = pd.read_csv('base.csv')
+            print("Dataset loaded successfully")
+            break
+        else:
+            import kagglehub
+            import shutil
+            path = kagglehub.dataset_download("sgpjesus/bank-account-fraud-dataset-neurips-2022")
+            csv_path = os.path.join(path, "base.csv")
+            shutil.copy(csv_path, "base.csv")
+            df_orig = pd.read_csv('base.csv')
+            print("Dataset downloaded and loaded successfully")
+            break
+    except Exception as e:
+        print(f"Attempting again to download dataset due to error: {e}")
+        if attemp < 2:
+            time.sleep(5)
+        else:
+            raise e
 
 df = df_orig
 train_df = df[df['month'] < 5].sample(frac=1, random_state=42)
