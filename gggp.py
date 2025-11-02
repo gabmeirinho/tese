@@ -72,17 +72,17 @@ target_fpr_value = 0.05
 
 for attemp in range(3):
     try:
-        if os.path.exists('base.csv'):
-            df_orig = pd.read_csv('base.csv')
+        if os.path.exists('Base.csv'):
+            df_orig = pd.read_csv('Base.csv')
             print("Dataset loaded successfully")
             break
         else:
             import kagglehub
             import shutil
             path = kagglehub.dataset_download("sgpjesus/bank-account-fraud-dataset-neurips-2022")
-            csv_path = os.path.join(path, "base.csv")
-            shutil.copy(csv_path, "base.csv")
-            df_orig = pd.read_csv('base.csv')
+            csv_path = os.path.join(path, "Base.csv")
+            shutil.copy(csv_path, "Base.csv")
+            df_orig = pd.read_csv('Base.csv')
             print("Dataset downloaded and loaded successfully")
             break
     except Exception as e:
