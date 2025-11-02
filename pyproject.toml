@@ -17,6 +17,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "aequitas",
     "kagglehub>=0.3.13",
+    "pathos>=0.3.4",
 ]
 
 [tool.uv.sources]
