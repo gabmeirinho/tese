@@ -8,6 +8,7 @@ import random
 import numpy as np
 from numpy.lib.stride_tricks import sliding_window_view
 
+from geneticengine.grammar.decorators import abstract
 from geneticengine.grammar.metahandlers.ints import IntRange
 from geneticengine.grammar import extract_grammar
 from geneticengine.grammar.decorators import weight
@@ -131,6 +132,28 @@ for feat in categorical_features:
 
 categorical_indices = [X_train_val.columns.get_loc(feat) for feat in categorical_features]
 
+VALID_CONDITIONS = []
+for abs_idx in categorical_indices:
+    feat_name = X_train_val.columns[abs_idx]
+    unique_values = np.unique(X_train_val.iloc[:, abs_idx])
+
+    for val in unique_values:
+        VALID_CONDITIONS.append((abs_idx, val, feat_name))
+
+NUM_VALID_CONDITIONS = len(VALID_CONDITIONS)
+
+n_features = X_train_val.shape[1]
+all_indices = set(range(n_features))
+cat_indices_set = set(categorical_indices)
+
+# Create strictly numerical indices list
+NUMERICAL_INDICES = sorted(list(all_indices - cat_indices_set))
+NUM_NUMERICAL = len(NUMERICAL_INDICES)
+
+print(f"Total features: {n_features}")
+print(f"Numerical features available for math: {NUM_NUMERICAL}")
+print(f"Categorical features available for conditions: {len(categorical_indices)}")
+
 # %%
 feature_names = X_train_val.columns.tolist()
 n_features = len(feature_names)
@@ -159,105 +182,127 @@ print("Average Recall at FPR < 5%:", baseline_tpr)
 # %%
 @dataclass
 class Value(ABC):
-    def evaluate(self):
-        pass
+    def evaluate(self): pass
 
-class Scalar(ABC):
+class Main(ABC):
     pass
 
-@weight(1.2)
-@dataclass #Scalar Features (1)
-class ScalarVar(Scalar): 
-    index: Annotated[int, IntRange(0,n_features-1)]
+@abstract
+@dataclass
+class Scalar(Main):
+    """Base for strictly numerical values (Raw variables OR Operations)"""
+    pass
+
+@abstract
+@dataclass
+@weight(0.45)
+class Operation(Scalar):
+    """Subset of Scalar for computed values"""
+    pass
+
+@abstract
+@dataclass
+class Condition(ABC):
+    def evaluate(self, X_np): pass
+
+# --- TERMINALS ---
+
+@weight(0.45)
+@dataclass
+class NumericalVar(Scalar): 
+    # CHANGE 1: Use strictly numerical indices
+    index: Annotated[int, IntRange(0, NUM_NUMERICAL - 1)]
 
     def evaluate(self, X_np):
-        return X_np[:, self.index]
+        return X_np[:, NUMERICAL_INDICES[self.index]]
     
     def __str__(self):
-        return feature_names[self.index]
+        return feature_names[NUMERICAL_INDICES[self.index]]
+
+@dataclass
+class CategoricalCondition(Condition):
+    # This is already correct; it uses your pre-calculated valid conditions
+    index: Annotated[int, IntRange(0, NUM_VALID_CONDITIONS-1)]
+
+    def evaluate(self, X_np):
+        abs_idx, val, _ = VALID_CONDITIONS[self.index]
+        return X_np[:, abs_idx] == val
     
-#scalar -> scalar
-@weight(0.2)
+    def __str__(self):
+        _, val, feat_name = VALID_CONDITIONS[self.index]
+        return f"({feat_name} == {val})"
+
+# --- OPERATIONS (inherit from Operation) ---
+# These take 'Scalar' as input, so they can take NumericalVar OR other Operations.
+# They CANNOT take Categorical features because we didn't make a CategoricalVar that inherits from Scalar.
+
+@weight(0.05)
 @dataclass 
-class Add(Scalar):
+class Add(Operation):
     right: Scalar
     left: Scalar
+    def evaluate(self, X_np): return self.left.evaluate(X_np) + self.right.evaluate(X_np)
+    def __str__(self): return f"({self.left} + {self.right})"
 
-    def evaluate(self, X_np):
-        return self.left.evaluate(X_np) + self.right.evaluate(X_np)
-    
-    def __str__(self):
-        return f"({self.left} + {self.right})"
-
-@weight(0.2)
+@weight(0.05)
 @dataclass
-class Subtract(Scalar):
+class Subtract(Operation):
     right: Scalar
     left: Scalar
+    def evaluate(self, X_np): return self.left.evaluate(X_np) - self.right.evaluate(X_np)
+    def __str__(self): return f"({self.left} - {self.right})"
 
-    def evaluate(self, X_np):
-        return (self.left.evaluate(X_np)) - (self.right.evaluate(X_np))
-    
-    def __str__(self):
-        return f"({self.left} - {self.right})"
-
-@weight(0.2)
+@weight(0.05)
 @dataclass
-class Multiply(Scalar):
+class Multiply(Operation):
     right: Scalar
     left: Scalar
+    def evaluate(self, X_np): return self.left.evaluate(X_np) * self.right.evaluate(X_np)
+    def __str__(self): return f"({self.left} * {self.right})"
 
-    def evaluate(self, X_np):
-        return self.left.evaluate(X_np) * self.right.evaluate(X_np)
-    
-    def __str__(self):
-        return f"({self.left} * {self.right})"
-
-@weight(0.2)
+@weight(0.05)
 @dataclass
-class Divide(Scalar):
+class Divide(Operation):
     right: Scalar
     left: Scalar
-
     def evaluate(self, X_np):
         denom = self.right.evaluate(X_np)
-        denom = np.where(denom == 0, 1e-6, denom)  # Avoid division by zero
-        return self.left.evaluate(X_np) / denom
+        return self.left.evaluate(X_np) / np.where(denom == 0, 1e-6, denom)
+    def __str__(self): return f"({self.left} / {self.right})"
     
-    def __str__(self):
-        return f"({self.left} / {self.right})"
-    
-@weight(0.2)
+@weight(0.05)
 @dataclass
-class Sqrt(Scalar):
+class Sqrt(Operation):
     value: Scalar
+    def evaluate(self, X_np): return np.sqrt(np.clip(self.value.evaluate(X_np), 0, None))
+    def __str__(self): return f"sqrt({self.value})"
+    
+@weight(0.05)
+@dataclass
+class Log(Operation):
+    value: Scalar
+    def evaluate(self, X_np): return np.log(np.where(self.value.evaluate(X_np) <= 0, 1e-6, self.value.evaluate(X_np)))
+    def __str__(self): return f"log({self.value})"
+
+# --- CONTROL FLOW ---
+@weight(0.25)
+@dataclass
+class IfThenElse(Main):
+    condition: Condition
+    then_case: Operation # Enforces operations only, as requested
+    else_case: Operation
 
     def evaluate(self, X_np):
-        val = self.value.evaluate(X_np)
-        val = np.asarray(val)
-        val = np.clip(val, a_min=0.0, a_max=None)
-        return np.sqrt(val)
+        mask = self.condition.evaluate(X_np)
+        return np.where(mask, self.then_case.evaluate(X_np), self.else_case.evaluate(X_np))
 
     def __str__(self):
-        return f"sqrt({self.value})"
-    
-@weight(0.2)
-@dataclass
-class Log(Scalar):
-    value: Scalar
+        return f"If({self.condition}, {self.then_case}, {self.else_case})"
 
-    def evaluate(self, X_np):
-        val = self.value.evaluate(X_np)
-        val = np.asarray(val)
-        val = np.where(val <= 0, 1e-6, val)
-        return np.log(val)
-    
-    def __str__(self):
-        return f"log({self.value})"
-    
-grammar = extract_grammar([Add, Subtract, Multiply, Divide, Sqrt, Log, ScalarVar], Scalar)
+# Final extraction
+# Note: We removed ScalarVar and added NumericalVar
+grammar = extract_grammar([Add, Subtract, Multiply, Divide, Sqrt, Log, NumericalVar, IfThenElse, CategoricalCondition, Operation], Main)
 print(f"Grammar: {repr(grammar)}")
-
 # %%
 def fitness_function(individual: Individual):
     # Avoid evaluating/adding duplicate engineered features
@@ -389,6 +434,7 @@ alg = GeneticProgramming(
                     "TPR": lambda t,i,p: i.get_fitness(p).fitness_components[0],
                     "TPR Diff": lambda t,i,p: i.get_fitness(p).fitness_components[0] - baseline_tpr,
                     "Expression": lambda t, i, p: i.get_phenotype(),
+                    "Elapsed": lambda t, i, p: i.get_fitness(p).fitness_components[4],
                     'Generation': lambda t,i,p: i.metadata["generation"]
                     },
             only_record_best_individuals=False)]
@@ -427,7 +473,7 @@ for fold, (train_idx, test_idx) in enumerate(test_skf.split(X_test_augmented, y_
     model_final = lgb.LGBMClassifier(n_estimators=350, max_depth=14, learning_rate=0.03, num_leaves=17, boosting_type='gbdt', random_state=42, n_jobs=-1, verbose=-1, scale_pos_weight=(y_train_val==0).sum() / (y_train_val==1).sum())
 
     
-    model_final.fit(X_train_val, y_train_val, categorical_feature=categorical_indices)
+    model_final.fit(X_train_val.to_numpy(), y_train_val, categorical_feature=categorical_indices)
     
     test_predictions = model_final.predict_proba(X_test_fold)[:, 1]
     
